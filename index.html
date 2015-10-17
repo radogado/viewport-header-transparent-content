@@ -14,7 +14,7 @@
 
 	<header>
 	
-	<div class="head"> <a href=# class="logo"> <img src=skrill-logo.png alt="Skrill"> </a> </div>
+	<div class="head"> <a href=# class="logo"> <img src=logo.svg alt="Skrill"> </a> </div>
 
 	<div class="hero">
 	
@@ -26,7 +26,7 @@
 				
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
 				<br>
-				<a class=button href=#>Open a Free Account</a>
+				<a class=button href=#>Get Started Now</a>
 		
 			</div>
 		
@@ -34,7 +34,7 @@
 		
 		<div>
 			
-			<div style="vertical-align: bottom; padding: 1em; text-align: center;">
+			<div class=content-arrow>
 				
 				<a href=#content>⬇︎</a>
 			
@@ -51,7 +51,7 @@
 					<span> 
 					<span style="padding-bottom: 13.974%; display: inline-block; width: 0;"></span>
 
-					<img src=carousel-offer.jpg alt="Carousel Offer"> 
+					<img src=carousel-offer.png alt="Carousel Offer"> 
 
 				</a>
 			
@@ -69,25 +69,25 @@
 
 	<div id=content>	
 		<div class="row transparent">
-			<div class="circle" style="background: url(skrill-logo.png) center center no-repeat; background-size: 50% auto;">
+			<div class="circle" style="background: url(logo.svg) center center no-repeat; background-size: 50% auto;">
 				
 			</div>
-			<div class="circle">
+			<div class="circle" style="background: url(logo.svg) center center no-repeat; background-size: 50% auto;">
 				b
 			</div>
-			<div class="circle">
+			<div class="circle" style="background: url(logo.svg) center center no-repeat; background-size: 50% auto;">
 				c
 			</div>
 		</div>
 		<div class="row">
-			<div><h3>CONVENIENCE</h3>
-				<p>Send and receive money, store cards, link bank accounts and pay conveniently anytime and anywhere with your email address and password.</p>	
+			<div><h3>First</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
 			</div>
-			<div><h3>CONFIDENCE</h3>
-				<p>Your security is a priority. We always keep your payments and personal information safe, and our anti-fraud team protects every transaction.</p>
+			<div><h3>Second</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
 			</div>
-			<div><h3>INSTANT</h3>
-				<p>It’s easy for Skrill wallet holders to send and receive money – you just need an email address. And with fees of only 1%, more money arrives.</p>
+			<div><h3>Third</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut labore et dolore magna aliqua</p>
 			</div>
 		</div>
 	</div>
@@ -100,6 +100,19 @@
 	Footer
 
 </footer>
+
+
+<script>
+
+var hero = document.querySelector('.hero > div > div');
+
+window.onscroll = function () {
+	
+	t = setTimeout(function () { hero.style.opacity = ( 100-(window.scrollY/2) )/100; }, 100);
+
+};
+
+</script>
 
 </body>
 </html>
