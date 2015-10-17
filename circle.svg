@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000"  xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Rectangle-1-+-Rectangle-1-Copy" transform="translate(-1.000000, -1.000000)" fill="#FFFFFF">
+      <path d="M501 1L1 1 1 501C1 224.86 224.86 1 501 1ZM1001 501L1001 1001 501 1001C777.14 1001 1001 777.14 1001 501Z" id="Rectangle-1" sketch:type="MSShapeGroup"/>
+      <path d="M501 1L1 1 1 501C1 224.86 224.86 1 501 1ZM1001 501L1001 1001 501 1001C777.14 1001 1001 777.14 1001 501Z" id="Rectangle-1-Copy" sketch:type="MSShapeGroup" transform="translate(501.000000, 501.000000) rotate(-270.000000) translate(-501.000000, -501.000000) "/>
+    </g>
+  </g>
+</svg>

@@ -136,23 +136,6 @@ main .row {
 
 }
 
-main .row.transparent {
-	
-	background: transparent;
-	padding: 0;
-	font-size: 0;
-	text-align: center;
-	white-space: nowrap;
-	display: block;
-
-}
-
-main .row.transparent > * {
-	
-	display: inline-block;
-	
-}
-
 header {
 	
 	height: 100vh;
@@ -388,28 +371,60 @@ a[href="#main"] {
 
 }
 
+main .row.transparent {
+	
+	background: transparent;
+	font-size: 0;
+
+}
+
 .transparent .circle {
 	
-	width: 33.334%;
-	height: 0;
+	transform: scale3d(1, 1, 1);
 	overflow: hidden;
-	font-size: 1rem;
-	box-sizing: border-box;
-	border: 1em solid #fff;
-	padding-bottom: calc(33.334% - 2em); /* Minus 2x border */
-	
+	border: 1rem solid #fff; /* Spacing between circles */
+
 }
 
 .transparent .circle:before {
 	
 	content: '';
-	display: block;
-	position: absolute;
-	background: url(circle.png) top left no-repeat;
-	background-size: 100%;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	display: inline-block;
+	padding-bottom: 100%;
 	
 }
+
+// Transparent circle box – image version
+
+/*
+.transparent .circle:before {
+	
+	content: '';
+	display: block;
+	position: absolute;
+	background: url(circle.svg) top left no-repeat;
+	background-size: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+}
+*/
+
+// Transparent circle box – CSS version
+
+.transparent .circle:after {
+	
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -99rem;
+	left: -99rem;
+	border: 99rem solid #fff;
+	border-radius: 50%;
+	
+}
+
