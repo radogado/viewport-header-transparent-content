@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<defs>
+      <ref id="paramFill" param="color" default="blue"/>
+</defs>
+    
+<g id="GUIDES">
+</g>
+<g id="white">
+	<g display="inline">
+		<g>
+			<g>
+				<path d="M50.5,80c2.5,0,4.6-2,4.6-4.6c0-2.5-2-4.6-4.6-4.6c-2.5,0-4.6,2-4.6,4.6C45.9,78,48,80,50.5,80z
+					 M50.5,73c1.4,0,2.5,1.1,2.5,2.5c0,1.4-1.1,2.5-2.5,2.5c-1.4,0-2.5-1.1-2.5-2.5C48,74.1,49.1,73,50.5,73z"/>
+				<path d="M72.7,12.9H27.3c-0.7,0-1.2,0.5-1.2,1.2v71.4c0,0.7,0.5,1.2,1.2,1.2h45.4c0.7,0,1.2-0.5,1.2-1.2V14.2
+					C73.9,13.5,73.4,12.9,72.7,12.9z M71.5,84.4h-43v-17h43V84.4z M71.5,64.9h-43v-39h43V64.9z M71.5,23.4h-43v-8h43V23.4z"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="LABELS">
+</g>
+<script type="text/javascript">
+    <![CDATA[
+    color = location.href.split('?color=')[1];
+   document.getElementsByTagName("path")[0].setAttribute("fill", color);
+   document.getElementsByTagName("path")[1].setAttribute("fill", color);
+  ]]>
+</script>
+
+    </svg>

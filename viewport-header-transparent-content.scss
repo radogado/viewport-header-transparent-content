@@ -411,6 +411,7 @@ footer {
 	transform: scale3d(1, 1, 1); /* Fix Safari's 1px gap between element and border */
 	overflow: hidden;
 	border: 1rem solid #fff; /* Spacing between circles */
+	position: relative;
 
 }
 
@@ -419,6 +420,7 @@ footer {
 	content: '';
 	display: inline-block;
 	padding-bottom: 100%;
+	vertical-align: middle;
 	
 }
 
@@ -456,6 +458,15 @@ footer {
 	
 }
 
+.transparent .circle > * {
+	
+	width: 70%;
+	height: 70%;
+	vertical-align: middle;
+	display: inline-block;
+
+}
+
 .content-arrow {
 	
 	vertical-align: bottom; 
@@ -463,3 +474,19 @@ footer {
 	text-align: center;
 	
 }
+
+/* SVG multi-color icons */
+
+.transparent .circle.white {
+	
+// 	background-image: url(mobile.svg?color=blue);
+	
+}
+
+/*
+.white object g#white {
+	
+	display: block !important;
+	
+}
+*/
