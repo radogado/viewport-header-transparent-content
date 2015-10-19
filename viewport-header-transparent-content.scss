@@ -180,7 +180,7 @@ header .hero > div:first-child > div {
 
 header p {
 	
-	background: rgba(0,0,0,.2);
+// 	background: rgba(0,0,0,.2);
 	display: inline-block;
 	padding: .3em .7em;
 	
@@ -208,10 +208,9 @@ a[href] {
 	
 }
 	
-a[href="#main"] {
+.head a[href] {
 	
-	color: #fff;
-	font-weight: bold;
+	vertical-align: top;
 
 }
 
@@ -260,6 +259,7 @@ main .row.transparent {
 	background: transparent;
 	font-size: 0;
 	overflow: hidden;
+	transform: scale3d(1, 1, 1); // Fix Safari's 1px gap between element and border
 
 }
 
@@ -456,8 +456,7 @@ footer {
 /* Transparent circles */
 
 .transparent .circle {
-	
-	transform: scale3d(1, 1, 1); /* Fix Safari's 1px gap between element and border */
+
 	overflow: hidden;
 	position: relative;
 
