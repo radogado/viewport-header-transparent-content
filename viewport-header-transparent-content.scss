@@ -22,6 +22,7 @@ html {
 	-webkit-transform: translate(0,0,0); /* saves 50ms on Chrome */
 	position: relative;
 	box-sizing: border-box;
+	overflow-x: hidden;
 
 }
 
@@ -33,6 +34,7 @@ html, body {
 	height: 100%;
 
 }
+
 
 body:before {
 	
@@ -252,7 +254,7 @@ main > #content {
 	-webkit-backface-visibility: hidden;
 }
 
-main > #content:before, main > #content:after {
+main > #content:before, main > #content:after { // Fix: Horizontal overflow on IE11-
 	
 	content: '';
 	display: block;
