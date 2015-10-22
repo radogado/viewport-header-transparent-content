@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Viewport Header, Transparent Content</title>
+	<link rel="styleSheet" href="bootstrap-grid-buttons.min.css" type="text/css" media="screen">
+	<link rel="styleSheet" href="viewport-header-transparent-content-bs.css" type="text/css" media="screen">
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+
+	<header>
+	
+	<div class="head"> 
+		
+		<a href=# class="logo"> 
+			
+			<img src=logo.svg alt="Skrill"> 
+		
+		</a> 
+		
+		<p> Head Content </p>
+	
+	</div>
+
+	<div class="hero">
+	
+		<div>
+			
+			<div>
+				
+				<h1>Viewport</h1>
+				
+				<p>Centered viewport-height header, animated button, promo image stuck to header's bottom, fixed header background, mobile view and transparent circles grid with variable-colour SVG icons.</p>	
+				<br>
+				<a class=btn href=#>Get Started Now</a>
+		
+			</div>
+		
+		</div>
+		
+		<div>
+			
+			<div class=content-arrow>
+				
+				<a href=#content>⬇︎</a>
+			
+			</div>
+
+		</div>
+
+		<div>
+			
+			<div style="background: #fff;">
+				
+				<a href=# style="display: block; font-size: 0; max-width: 63.0625rem; margin: 0 auto;"> <!-- Preserve space for the image, according to its aspect ratio -->
+					
+					<span> 
+					<span style="padding-bottom: 13.974%; display: inline-block; width: 0;"></span>
+
+					<img src=carousel-offer.png alt="Carousel Offer" style="position: absolute; max-width: 100%; left: 50%; right: 0px; transform: translateX(-50%);">
+
+				</a>
+			
+			</div>
+		
+		</div>
+	
+	</div>
+
+</header>
+
+<body>
+
+<main>
+
+	<div id=content>	
+		<div class="row transparent">
+			<div class="col-sm-4">
+				<div class="circle grey">
+					
+					<object data="mobile.svg?color=white"></object>
+	
+				</div>
+
+				<div>
+					<h3>First</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
+				</div>
+
+			</div>
+			<div class="col-sm-4">
+				<div class="circle white">
+	
+					<object data="mobile.svg?color=grey"></object>
+	
+				</div>
+
+				<div>
+					<h3>Second</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+				</div>
+
+			</div>
+			<div class="col-sm-4">
+				<div class="circle">
+	
+					<object data="mobile.svg?color=purple"></object>
+	
+				</div>
+
+				<div>
+					<h3>Third</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut labore et dolore magna aliqua</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+</main>
+
+<footer>
+	
+	Footer
+
+</footer>
+
+
+<script>
+
+var hero = document.querySelector('.hero > div > div');
+
+window.onscroll = function () {
+	
+	t = setTimeout(function () { hero.style.opacity = ( 100-(window.scrollY/2) )/100; }, 100);
+
+};
+
+</script>
+
+</body>
+</html>
