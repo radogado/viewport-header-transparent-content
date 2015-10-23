@@ -38,7 +38,6 @@ html, body {
 
 body:before {
 	
-	-webkit-transform: translate(0,0,0); /* saves 50ms on Chrome */
 	content: '';
 	display: block;
 	position: fixed;
@@ -46,7 +45,7 @@ body:before {
 	left: 0;
 	right: 0;
 	bottom: 100vh;
-	height: 100vh;
+	height: 100%;
 	background: red;
 	background: #40315a url(DSC06291.jpg) top center no-repeat;
 	background-size: cover;
