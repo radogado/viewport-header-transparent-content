@@ -305,6 +305,12 @@ main .row.transparent {
 
 }
 
+main .row.transparent:before, main .row.transparent:after {
+	
+	display: none;
+
+}
+
 main .row.transparent > * {
 	
 	margin: 0;
