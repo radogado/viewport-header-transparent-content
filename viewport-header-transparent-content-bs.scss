@@ -302,6 +302,7 @@ main .row.transparent {
 // 	width: 100%;
 	border-collapse: separate;
 	margin-top: -5px; // Fix a crack on narrow screens
+	max-width: none;
 
 }
 
@@ -529,6 +530,7 @@ footer {
 main .row.transparent > * > .circle {
 
 	background: transparent;
+	text-align: center;
 
 }
 

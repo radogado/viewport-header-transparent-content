@@ -1,0 +1,175 @@
+body {
+	
+	 -webkit-font-smoothing: antialiased;
+
+}
+
+.align-right {
+	
+	text-align: right;
+
+}
+
+.align-center {
+	
+	text-align: center;
+
+}
+
+.align-top, .align-top > *, .row.table > .align-top {
+	
+	vertical-align: top;
+	align-self: flex-start;
+	
+}
+
+.align-middle, .align-middle > *, .row.table > .align-middle {
+	
+	vertical-align: middle;
+	align-self: center;
+	
+}
+
+.align-bottom, .align-bottom > *, .row.table > .align-bottom {
+	
+	vertical-align: bottom;
+	align-self: flex-end;
+	
+}
+
+/* Columns with equal width as class-less div's in a .row */
+
+.row.table {
+	
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin: 0;
+
+}
+
+.row.table > * {
+	
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+	word-wrap: break-word;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
+
+.row:before, .row:after {
+	
+	content: none;
+
+}
+
+.row > * > .row {
+	
+	max-width: calc(100% + 2rem);
+	width: calc(100% + 2rem);
+
+}
+
+.row > * > .row.auto {
+	
+	margin: -1rem;
+
+}
+
+.row {
+	
+	display: block;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	 -webkit-justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	text-align: left;
+	justify-content: left;
+	font-size: 0;
+	
+}
+
+.row > * {
+	
+	display: inline-block;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	text-align: left;
+	font-size: 1rem;
+
+}
+
+/* Masonry in CSS only */
+
+.masonry {
+
+    -moz-column-count: 3;
+    -moz-column-gap: 1rem;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1rem;
+    column-count: 3;
+    column-gap: 1rem;
+    background: #fff;
+
+}
+
+    .masonry > * {
+
+        display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
+        margin-bottom: 1rem;
+        width: 100%;
+        -webkit-column-break-inside: avoid;
+		page-break-inside: avoid;           /* FF 20+ */
+		break-inside: avoid-column;
+
+    }
+
+/* Aspect ratio */
+
+.aspect {
+	
+	 display: block;
+	 overflow: hidden;
+	 text-align: center;
+	 font-size: 0;
+
+}
+
+.aspect > * {
+	
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1rem;
+
+}
+
+.aspect img {
+	
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+
+}
+
+.aspect span { /*  Ratio can be overwritten with inline CSS padding-bottom */
+
+	padding-bottom: 56.25%; /*    y / x * 100   default 16:9    */
+	width: 0; 
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+/* Bootstrap Carousel additions */
+
+.carousel-inner>.item>img {
+	
+	margin: 0 auto;
+	
+}

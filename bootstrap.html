@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Viewport Header, Transparent Content</title>
-	<link rel="styleSheet" href="bootstrap-grid-buttons.min.css" type="text/css" media="screen">
+	<link rel="styleSheet" href="bootstrap.min.css" type="text/css" media="screen">
+	<link rel="styleSheet" href="bootstrap.rado.css" type="text/css" media="screen">
 	<link rel="styleSheet" href="viewport-header-transparent-content-bs.css" type="text/css" media="screen">
 
   <!--[if lt IE 9]>
@@ -36,14 +37,20 @@
 	
 		<div>
 			
-			<div>
+			<div style="font-size: 0;">
+			
+				<span style="display: inline-block; width: 0; height: 100%; vertical-align: middle;"></span>
 				
-				<h1>Viewport</h1>
-				
-				<p>Centered viewport-height header, animated button, promo image stuck to header's bottom, fixed header background, mobile view and transparent circles grid with variable-colour SVG icons.</p>	
-				<br>
-				<a class=btn href=#>Get Started Now</a>
-		
+				<div style="display: inline-block; vertical-align: middle; font-size: 1rem;">
+					
+					<h1>Viewport</h1>
+					
+					<p>Centered viewport-height header, animated button, promo image stuck to header's bottom, fixed header background, mobile view and transparent circles grid with variable-colour SVG icons.</p>	
+					<br>
+					<a class=btn href=#>Get Started Now</a>
+			
+				</div>
+			
 			</div>
 		
 		</div>
@@ -58,20 +65,15 @@
 
 		</div>
 
-		<div style="max-width: 100%;">
+		<div style="max-width: none; background: #fff; width: 100%;">
 			
-			<div style="background: #fff;">
+			<a href=# style="display: block; font-size: 0; max-width: 63.0625rem; margin: 0 auto;"> <!-- Preserve space for the image, according to its aspect ratio -->
 				
-				<a href=# style="display: block; font-size: 0; max-width: 63.0625rem; margin: 0 auto;"> <!-- Preserve space for the image, according to its aspect ratio -->
-					
-					<span> 
-					<span style="padding-bottom: 13.974%; display: inline-block; width: 0;"></span>
+				<span style="padding-bottom: 7%; display: inline-block; width: 0;"></span>
 
-					<img src=carousel-offer.png alt="Carousel Offer" style="position: absolute; max-width: 100%; left: 50%; right: 0px; transform: translateX(-50%);">
+				<img src=carousel-offer.png alt="Carousel Offer">
 
-				</a>
-			
-			</div>
+			</a>
 		
 		</div>
 	
@@ -84,6 +86,7 @@
 <main>
 
 	<div id=content>
+
 		<div class="row transparent">
 			<div class="col-sm-4">
 				<div class="circle grey">
@@ -125,8 +128,137 @@
 
 			</div>
 		</div>
+		
+		<div class="row">
+			
+			<div class="col-xs-12">
 
-        <div class="csc-default">
+				<h2>Updated grid with vertical alignment</h2>
+			
+			</div>
+			
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-sm-8 align-middle" style="background: #a66;">A</div>
+			<div class="col-sm-4" style="background: #6a6;">B<br>B<br>B</div>
+			<div class="col-sm-6" style="background: #66a;">C<br>C</div>
+		
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-xs-12">
+
+				<h2>No-wrapping grid with equal-height columns</h2>
+			
+			</div>
+			
+		</div>
+		
+		<div class="row table">
+			
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div style="background: #6a6;">B<br>B<br>B</div>
+		
+		</div>
+		
+		<div class="row table" style="border-spacing: 1rem;">
+			
+			<div class="align-bottom" style="background: #a66;">A</div>
+			<div style="background: #6a6;">B<br>B<br>B</div>
+		
+		</div>
+
+		<div class="row">
+			
+			<div class="col-xs-12">
+
+				<h2>CSS-only Masonry</h2>
+			
+			</div>
+			
+		</div>
+		
+		<div class="masonry">
+			
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div class="align-middle" style="background: #a66;">A</div>
+			<div style="background: #6a6;">B<br>B<br>B</div>
+		
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-xs-12">
+
+				<h2>Aspect ratio container</h2>
+
+				<span class="aspect">
+										
+					<span style="padding-bottom: 42.5625%"></span>
+					<img src="lido.jpg" alt="">
+										
+				</span>
+			
+			</div>
+		
+		</div>
+
+		<div class="row">
+			
+			<div class="col-xs-12">
+
+				<h2>CSS-only parallax scroll</h2>
+
+				<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/">http://keithclark.co.uk/articles/pure-css-parallax-websites/</a>
+			
+			</div>
+		
+		</div>
+
+		<div class="row">
+			
+			<div class="col-xs-12">
+				
+				<h2>Carousel (Bootstrap)</h2>
+				
+				<div id="carousel-example-generic" class="carousel slide" data-slide-to="0">
+				      <ol class="carousel-indicators">
+				        <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+				        <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+				        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+				      </ol>
+				      <div class="carousel-inner" role="listbox">
+				        <div class="item">
+				          <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide [900x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNzc3OiM1NTUvdGV4dDpGaXJzdCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MTM2MWZhODZlIHRleHQgeyBmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NDVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUxMzYxZmE4NmUiPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNzc3Ii8+PGc+PHRleHQgeD0iMzA4LjI4OTA2MjUiIHk9IjI3MC4xMTQwNjI1Ij5GaXJzdCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+				        </div>
+				        <div class="item active">
+				          <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide [900x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNjY2OiM0NDQvdGV4dDpTZWNvbmQgc2xpZGUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTEzNjIwMGI0OCB0ZXh0IHsgZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQ1cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MTM2MjAwYjQ4Ij48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiIvPjxnPjx0ZXh0IHg9IjI2NC45NDUzMTI1IiB5PSIyNzAuMTE0MDYyNSI+U2Vjb25kIHNsaWRlPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true">
+				        </div>
+				        <div class="item">
+				          <img data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide [900x500]" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNTU1OiMzMzMvdGV4dDpUaGlyZCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MTM2MWZlY2E3IHRleHQgeyBmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NDVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUxMzYxZmVjYTciPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNTU1Ii8+PGc+PHRleHQgeD0iMjk4LjMxMjUiIHk9IjI3MC4xMTQwNjI1Ij5UaGlyZCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true">
+				        </div>
+				      </div>
+				      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				        <span class="sr-only">Previous</span>
+				      </a>
+				      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				        <span class="sr-only">Next</span>
+				      </a>
+				    </div>
+				
+				</div>
+			
+			</div>
+		    
+            <div class="csc-default">
             <div class="section is-parallax punchout-image-3col light">
                 <div class="full-background-container">
                     <div class="full-background-image anchor-left background-fixed" style="background-image: url(/fileadmin/content/homepage-hero/homepage-hero-blur.jpg);">
@@ -2640,6 +2772,9 @@ window.onscroll = function () {
 };
 
 </script>
+
+<script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="bootstrap.min.js" type="text/javascript"></script>
 
 </body>
 </html>
