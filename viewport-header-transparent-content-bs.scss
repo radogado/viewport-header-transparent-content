@@ -19,7 +19,7 @@
 
 html {
 	
-	position: relative;
+// 	position: relative;
 	box-sizing: border-box;
 	overflow-x: hidden;
 
@@ -34,9 +34,17 @@ html, body {
 
 }
 
+body {
+	
+	background: #40315a url(DSC06291.jpg) top center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
 
 body:before {
 	
+/*
 	content: '';
 	display: block;
 	position: fixed;
@@ -49,6 +57,9 @@ body:before {
 	background: #40315a url(DSC06291.jpg) top center no-repeat;
 	background-size: cover;
 	z-index: -1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+*/
 	
 }
 
@@ -260,12 +271,16 @@ main > #content {
 	
 	max-width: 1280px;
 	margin: 0 auto;
-	position: relative;
 	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	box-shadow: 50vw 0 0 #fff, -50vw 0 0 #fff, 0 50vh 0 #fff;
+
 }
 
 main > #content:before, main > #content:after { // Fix: Horizontal overflow on IE11-
 	
+/*
 	content: '';
 	display: block;
 	width: 100vw;
@@ -274,6 +289,7 @@ main > #content:before, main > #content:after { // Fix: Horizontal overflow on I
 	bottom: 0;
 	background: #fff;
 	position: absolute;
+*/
 
 }
 

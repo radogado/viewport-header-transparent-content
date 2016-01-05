@@ -16,21 +16,21 @@ body {
 
 }
 
-.align-top, .align-top > *, .row.table > .align-top {
+.align-top, .align-top > *, .row.auto > .align-top {
 	
 	vertical-align: top;
 	align-self: flex-start;
 	
 }
 
-.align-middle, .align-middle > *, .row.table > .align-middle {
+.align-middle, .align-middle > *, .row.auto > .align-middle {
 	
 	vertical-align: middle;
 	align-self: center;
 	
 }
 
-.align-bottom, .align-bottom > *, .row.table > .align-bottom {
+.align-bottom, .align-bottom > *, .row.auto > .align-bottom {
 	
 	vertical-align: bottom;
 	align-self: flex-end;
@@ -39,16 +39,23 @@ body {
 
 /* Columns with equal width as class-less div's in a .row */
 
-.row.table {
+.row.auto {
 	
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	margin: 0;
+	border-collapse: separate;
 
 }
 
-.row.table > * {
+.row.auto:after, .row.auto:before {
+	
+	display: none !important;
+
+}
+
+.row.auto > * {
 	
 	display: table-cell;
 	vertical-align: top;
@@ -56,12 +63,25 @@ body {
 	word-wrap: break-word;
 	padding-left: 15px;
 	padding-right: 15px;
+	float: none;
 
 }
 
-.row:before, .row:after {
+.row.auto.spacing {
 	
-	content: none;
+	border-spacing: 1rem;
+
+}
+
+.row.auto.spacing-horizontal {
+	
+	border-spacing: 1rem 0;
+
+}
+
+.row.auto.spacing-vertical {
+	
+	border-spacing: 0 1rem;
 
 }
 
