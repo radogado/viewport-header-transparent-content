@@ -114,16 +114,22 @@ body {
 	
 }
 
-.row > * {
+	.row:before, .row:after {
+		
+		display: none;
 	
-	display: inline-block;
-	-webkit-flex: 0 1 auto;
-	-ms-flex: 0 1 auto;
-	flex: 0 1 auto;
-	text-align: left;
-	font-size: 1rem;
-
-}
+	}
+	
+	.row > * {
+		
+		display: inline-block;
+		-webkit-flex: 0 1 auto;
+		-ms-flex: 0 1 auto;
+		flex: 0 1 auto;
+		text-align: left;
+		font-size: 1rem;
+	
+	}
 
 /* Masonry in CSS only */
 
@@ -161,30 +167,30 @@ body {
 
 }
 
-.aspect > * {
+	.aspect > * {
+		
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1rem;
 	
-	display: inline-block;
-	vertical-align: top;
-	font-size: 1rem;
-
-}
-
-.aspect img {
+	}
 	
-	max-width: 100%;
-	height: auto;
-	vertical-align: middle;
-
-}
-
-.aspect span { /*  Ratio can be overwritten with inline CSS padding-bottom */
-
-	padding-bottom: 56.25%; /*    y / x * 100   default 16:9    */
-	width: 0; 
-	display: inline-block;
-	vertical-align: middle;
-
-}
+	.aspect img {
+		
+		max-width: 100%;
+		height: auto;
+		vertical-align: middle;
+	
+	}
+	
+	.aspect span { /*  Ratio can be overwritten with inline CSS padding-bottom */
+	
+		padding-bottom: 56.25%; /*    y / x * 100   default 16:9    */
+		width: 0; 
+		display: inline-block;
+		vertical-align: middle;
+	
+	}
 
 /* Bootstrap Carousel additions */
 

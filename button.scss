@@ -1,0 +1,120 @@
+/* Animated button */
+
+@-webkit-keyframes button-animation {
+
+	0% {
+		background-size: 100% 100%;
+		color: rgba(0, 0, 0, 0);
+		-webkit-transform: scale(.01,.01);
+	}
+
+	40% {
+		-webkit-transform: scale(1,.01);
+	}
+
+	80% {
+		-webkit-transform: scale(1,1);
+		background-size: 100% 100%;
+		color: rgb(84, 76, 100);
+	}
+	
+	100% {
+		
+		background-size: 100% 0;
+		color: rgb(255,255,255);
+		
+	}
+
+}	
+
+@keyframes button-animation {
+
+	0% {
+		background-size: 100% 100%;
+		color: rgba(0, 0, 0, 0);
+		transform: scale(.01,.01);
+	}
+
+	40% {
+		transform: scale(1,.01);
+	}
+
+	80% {
+		transform: scale(1,1);
+		background-size: 100% 100%;
+		color: rgb(84, 76, 100);
+	}
+	
+	100% {
+		
+		background-size: 100% 0;
+		color: rgb(255,255,255);
+		
+	}
+
+}	
+
+.btn {
+
+	-webkit-transition: all .15s linear;
+	transition: all .15s linear;
+	
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	
+	-webkit-animation: button-animation 1.5s 1;
+	animation: button-animation 1.5s 1;
+
+	padding: 1em 1.7em;
+	border: 1px solid #fff;
+	border-radius: 3px;
+	text-transform: uppercase;
+	padding-right: 6em;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+
+	background: rgba(5,218,252,.5) bottom no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4/x8AAwAB/2+Bq7YAAAAASUVORK5CYII=);
+	
+	background-size: 100% 0;
+	color: rgb(255,255,255);
+	
+	font-family:robotolight,Helvetica,Arial,sans-serif;
+	letter-spacing: 1px;
+	text-align: left;
+	
+}
+
+.btn:after {
+	
+	content: '›';
+	display: inline-block;
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border: 1px solid #fff;
+	height: 1em;
+	width: 1em;
+	text-align: center;
+	line-height: .7em;
+	border-radius: 50%;
+
+}
+
+.btn:hover {
+	
+	background-size: 100% 100%;
+	color: rgb(84, 76, 100);
+
+}
+
+.btn:hover:after {
+	
+	background-size: 100% 100%;
+	border-color: rgb(84, 76, 100);
+	color: rgb(84, 76, 100);
+
+}
