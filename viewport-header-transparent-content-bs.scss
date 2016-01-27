@@ -1,5 +1,8 @@
+@import 'bootstrap.min';
+@import 'bootstrap.rado';
 @import 'transparency';
 @import 'button';
+@import 'viewport-hero';
 
 @font-face {
     font-family: robotolight;
@@ -24,6 +27,11 @@ html {
 	
 	box-sizing: border-box;
 	overflow-x: hidden;
+/*
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+*/
 
 }
 
@@ -47,14 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 header {
 	
 	overflow: hidden;
-	min-height: 100vh;
 	position: relative;
-
-}
-
-.viewport-height {
-	
-	min-height: 100vh;
+	color: #fff;
 
 }
 
@@ -100,7 +102,14 @@ header a.logo {
 	
 }
 
-header a.logo img {
+[dir=rtl] header a.logo {
+
+	margin-right: 0;	
+	margin-left: 0;	
+	
+}
+
+.head a.logo img {
 	
 	display: block;
 
@@ -126,35 +135,12 @@ header a.logo img {
 
 header .hero {
 	
-	width: 100%; 
-	display: flex;
-	flex-direction: column;
-
+	text-align: center;
 }
 
 header .hero p {
 	
 	font-size: 1.2em;
-}
-
-header .hero > div:first-child {
-
-	flex: 1 0 auto;
-
-}
-
-header .hero > div > div {
-	
-	 vertical-align: middle; 
-	 color: #fff; 
-	 text-align: center;
-
-}
-
-header .hero > div:first-child > div {
-	
-	 padding: 4em 1em 1em 1em;
-
 }
 
 header p {
@@ -218,5 +204,31 @@ footer {
 	
 	padding: 1px;
 	margin-top: -1px;
+	
+}
+
+.hero-bottom-banner {
+	
+	 max-width: none; 
+	 background: #fff; 
+	 width: 100%;
+	 
+}
+
+.hero-bottom-banner a[href] {
+	
+	 display: block; 
+	 font-size: 0; 
+	 max-width: 63.0625rem; 
+	 margin: 0 auto;
+	 
+}
+
+.hero-bottom-banner a[href]:before {
+	
+	content: '';
+	padding-bottom: 7%; //  Aspect ratio
+	display: inline-block; 
+	width: 0;
 	
 }

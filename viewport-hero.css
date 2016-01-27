@@ -1,0 +1,1 @@
+.viewport-flex{height:100vh;display:table;text-align:center;width:100%;table-layout:fixed}.viewport-flex>*{display:table-row}.viewport-flex>.grow-align{display:table-row;height:100%}.viewport-flex>.grow-align>*{vertical-align:middle;display:table-cell}

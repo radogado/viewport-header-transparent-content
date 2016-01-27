@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Viewport Header, Transparent Content</title>
-	<link rel="styleSheet" href="bootstrap.min.css" type="text/css" media="screen">
-	<link rel="styleSheet" href="bootstrap.rado.css" type="text/css" media="screen">
 	<link rel="styleSheet" href="viewport-header-transparent-content-bs.css" type="text/css" media="screen">
 
 	<!--[if lt IE 9]>
@@ -17,9 +15,9 @@
     
 </head>
 
-<body>
+<body dir=ltr>
 
-	<header class="viewport-height">
+	<header>
 	
 		<div class="head"> 
 			
@@ -33,52 +31,42 @@
 		
 		</div>
 	
-		<div class="hero viewport-height">
-		
-			<div class="contain">
-				
-				<div style="font-size: 0;">
-				
-					<span style="display: inline-block; width: 0; height: 100%; vertical-align: middle;"></span>
+		<div class=viewport-flex>
+
+			<div class="grow-align">
+				<div>	
+					<h1>Viewport</h1>
 					
-					<div style="display: inline-block; vertical-align: middle; font-size: 1rem; padding-top: 3em;">
-						
-						<h1>Viewport</h1>
-						
-						<p>Centered viewport-height header, animated button, promo image stuck to header's bottom, fixed header background, mobile view and transparent circles grid with variable-colour SVG icons.</p>	
-						<br>
-						<a class=btn href=#>Get Started Now</a>
-				
-					</div>
-				
+					<p>Centered viewport-height header, animated button, promo image stuck to header's bottom, fixed header background, mobile view and transparent circles grid with variable-colour SVG icons.</p>	
+					<br>
+					<a class="btn" href="#">Get Started Now</a>
 				</div>
-			
 			</div>
-			
+
 			<div>
-				
-				<div class=content-arrow>
+
+				<div>
+					<div class="content-arrow">
+						
+						<a href="#content">⬇︎</a>
 					
-					<a href=#content>⬇︎</a>
-				
-				</div>
-	
-			</div>
-	
-			<div style="max-width: none; background: #fff; width: 100%;">
-				
-				<a href=# style="display: block; font-size: 0; max-width: 63.0625rem; margin: 0 auto;"> <!-- Preserve space for the image, according to its aspect ratio -->
-					
-					<span style="padding-bottom: 7%; display: inline-block; width: 0;"></span>
-	
-					<img src=carousel-offer.png alt="Carousel Offer">
-	
-				</a>
+					</div>
 			
-			</div>
+				</div>
 		
-		</div>
+				<div class="hero-bottom-banner">
+				
+					<a href="#">
+				
+						<img src="carousel-offer.png" alt="Carousel Offer">
+				
+					</a>
+		        </div>
+				
+			</div>
 	
+		</div>
+			
 	</header>
 
 	<main>
@@ -2759,6 +2747,7 @@
 
 <script>
 
+/*
 var hero = document.querySelector('.hero > div > div');
 
 window.onscroll = function () {
@@ -2766,6 +2755,7 @@ window.onscroll = function () {
 	t = setTimeout(function () { hero.style.opacity = ( 100-(window.scrollY/2) )/100; }, 100);
 
 };
+*/
 
 </script>
 

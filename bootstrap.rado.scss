@@ -6,7 +6,7 @@ body {
 
 .align-right {
 	
-	text-align: right;
+	text-align: end;
 
 }
 
@@ -108,8 +108,8 @@ body {
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	text-align: left;
-	justify-content: left;
+	text-align: start;
+	justify-content: flex-start;
 	font-size: 0;
 	
 }
@@ -126,8 +126,9 @@ body {
 		-webkit-flex: 0 1 auto;
 		-ms-flex: 0 1 auto;
 		flex: 0 1 auto;
-		text-align: left;
+		text-align: start;
 		font-size: 1rem;
+		vertical-align: top;
 	
 	}
 
