@@ -3,6 +3,7 @@
 @import 'transparency';
 @import 'button';
 @import 'viewport-hero';
+@import 'nav';
 
 @font-face {
     font-family: robotolight;
@@ -96,19 +97,6 @@ header h1 {
 
 }
 
-header a.logo {
-
-	margin-right: 1em;	
-	
-}
-
-[dir=rtl] header a.logo {
-
-	margin-right: 0;	
-	margin-left: 0;	
-	
-}
-
 .head a.logo img {
 	
 	display: block;
@@ -121,9 +109,33 @@ header a.logo {
 	left: 0;
 	right: 0;
 	background: rgba(0,0,0,.5);
-	font-size: 0;
 	z-index: 1;
 	color: #fff;
+	display: flex;
+	
+}
+
+.head > * {
+	
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+    padding: 0 1em;
+
+}
+
+.head > .logo {
+	
+	padding: 0;
+
+
+}
+
+.head .middle-space {
+	
+    flex: 1 1 auto;
+    overflow: hidden;
 	
 }
 
