@@ -85,8 +85,15 @@ header h1 {
 	
 	header a.logo img {
 		
-		height: 5em;
+		height: 6em;
+		max-width: none;
+
+	}
+	
+	.head > .logo {
 		
+		width: 3em;
+
 	}
 	
 	.row.transparent {
