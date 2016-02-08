@@ -1,3 +1,5 @@
+/* To fix: full-width section with bg images getting white colour from its top neighbour with transparent circles */
+
 .transparency body {
 	
 	background: #40315a url(DSC06291.jpg) top center no-repeat;
@@ -12,7 +14,7 @@
 
 }
 
-.transparency main > #content {
+.section.contain {
 	
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0,0,0);
@@ -21,9 +23,9 @@
 
 }
 
-.transparency #content > *:not(.transparent) {
+.section.contain:not(.transparent) {
 	
-	background: #fff;
+	background-color: #fff;
 
 }
 
@@ -36,8 +38,7 @@
     display: table;
     table-layout: fixed;
 	border-collapse: separate;
-	margin: -5px 0 0 0; // Fix a crack on narrow screens
-	max-width: none;
+	margin: -5px auto  0 auto; // Fix a crack on narrow screens
 
 }
 
@@ -56,17 +57,6 @@
     width: 33.3%;
     position: relative;
     vertical-align: top;
-
-}
-
-.transparency main .row.transparent > *:after {
-	
-	content: '';
-	display: block; 
-	background: #fff;
-	width: 100%;
-	height: 100%; 
-	position: absolute; 
 
 }
 
@@ -96,6 +86,12 @@
 	border-right: 5em solid #fff;
 	border-top: 2em solid #fff;
 	border-bottom: 2em solid #fff;
+
+}
+
+.transparency main .row.transparent > * > *:not(.circle) {
+
+	box-shadow: 0 100px 0 #fff; // Should be 100vh
 
 }
 
@@ -170,7 +166,7 @@ main .row.transparent > * > .circle {
 	
 }
 
-.section {
+main .section:not(.transparent) {
 	
 	background: #fff;
 	
