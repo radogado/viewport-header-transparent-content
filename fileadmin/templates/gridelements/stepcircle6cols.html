@@ -1,0 +1,25 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+
+
+
+	<div class="section is-parallax animated-stepcircles">
+		<div class="module-container">
+			<div class="intro-copy">
+				<f:format.html>{data.tx_gridelements_view_raw_columns.10.0.bodytext}</f:format.html>
+			</div>
+			<ul class="module-stepcircles col-count-3">
+				<li><f:format.raw>{data.tx_gridelements_view_column_21}</f:format.raw></li>
+				<li><f:format.raw>{data.tx_gridelements_view_column_22}</f:format.raw></li>
+				<li><f:format.raw>{data.tx_gridelements_view_column_23}</f:format.raw></li>
+				<li><f:format.raw>{data.tx_gridelements_view_column_24}</f:format.raw></li>
+				<li><f:format.raw>{data.tx_gridelements_view_column_25}</f:format.raw></li>
+				<li><f:format.raw>{data.tx_gridelements_view_column_26}</f:format.raw></li>
+			</ul>
+			<f:format.raw>{data.tx_gridelements_view_column_19}</f:format.raw>
+			<f:if condition="{data.flexform_appstore}">
+				<f:render partial="appstore" arguments="{_all}"/>
+			</f:if>
+		</div>
+	</div>
+

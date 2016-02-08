@@ -1,0 +1,75 @@
+<f:layout name="Default"/>
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<div class="section affiliates light">
+		<div class="container-fluid">
+			<div class="module-container">
+				<ul class="accordion top-level">
+					<li>
+						<div class="accordion-wrap is-open">
+							<div class="accordion-content">
+								<script>
+									var affiliateItems=<f:format.html parseFuncTSPath="">{llitems}</f:format.html >;
+								</script>
+
+								<ul class="accordion top-level embedded-html">
+									<f:for each="{categories}" as="category">
+										<li>
+											<div class="accordion-wrap">
+												<h4 class="accordion-trigger">
+													<a href="#">
+														<span class="icon icon-expand-large"></span>
+														<span class="icon icon-minimize-large"></span>
+														{category.title}
+													</a>
+												</h4>
+
+												<div class="accordion-content">
+													<div class="row">
+														<f:for each="{category.affiliateitems}" as="affiliateitem" iteration="objIterator">
+															<div class="banner col-xs-12 col-lg-3" id="affiliateitem-{affiliateitem.uid}">
+																<img class="affiliate-image" src="{affiliateitem.file.originalResource.publicUrl}" alt="{affiliateitem.title}" title="{affiliateitem.title}">
+
+																<p>{affiliateitem.alttext}</p>
+																<button id="affiliateitem-link-{affiliateitem.uid}"
+																		class="button affiliateitem-link">
+																	<span class="panel"></span>
+																	<span class="copy">Get HTML code</span>
+																	<span class="icon icon-arrow-right"></span>
+																</button>
+															</div>
+														</f:for>
+													</div>
+												</div>
+											</div>
+										</li>
+									</f:for>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="html-overlay">
+		<span class="pointer"></span>
+		<button class="close close-icon">
+			<span class="icon icon-minimize-large"></span>
+		</button>
+		<h3>Embed this code on your site</h3>
+		<div class="embedded-code"></div>
+	</div>
+</f:section>

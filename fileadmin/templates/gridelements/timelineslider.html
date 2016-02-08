@@ -1,0 +1,34 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<div class="section timeline-slider">
+	<div class="module-container">
+		<h2 class="module-title">
+			<f:format.raw>{data.header}</f:format.raw>
+		</h2>
+
+		<div class="slider-master-holder">
+			<div class="slider-container">
+				<ul class="slide-list">
+					<f:format.raw>{data.tx_gridelements_view_column_40}</f:format.raw>
+				</ul>
+			</div>
+			<div class="slider-arrows">
+				<button class="arrow-prev">
+					<div class="icon icon-arrow-right"></div>
+				</button>
+				<button class="arrow-next">
+					<div class="icon icon-arrow-right"></div>
+				</button>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="slider-controller">
+				<div class="scrollbar-track">
+					<div class="track-bg"></div>
+					<div class="scrubber"></div>
+				</div>
+				<div class="date-left">2001</div>
+				<div class="date-right">2015</div>
+			</div>
+		</div>
+	</div>
+</div>

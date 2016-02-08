@@ -1,0 +1,31 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:if condition="{cta_link}">
+	<f:if condition="{cta_linklabel}">
+		<f:if condition="{theme}=='light'">
+			<v:link.typolink configuration="{parameter: cta_link, ATagParams: 'class=\"button button-light-purple lv1\"'}">
+			<span class="panel"></span>
+			<span class="copy">{cta_linklabel}</span>
+			<span class="icon icon-arrow-right-circle"></span>
+			</v:link.typolink>
+
+		</f:if>
+		<f:if condition="{theme}=='dark'">
+
+			<v:link.typolink configuration="{parameter: cta_link, ATagParams: 'class=\"button button-teal lv1\"'}">
+				<span class="panel"></span>
+				<span class="copy">{cta_linklabel}</span>
+				<span class="icon icon-arrow-right-circle"></span>
+			</v:link.typolink>
+
+		</f:if>
+		<f:if condition="{theme}=='white'">
+			<v:link.typolink configuration="{parameter: cta_link, ATagParams: 'class=\"button button-dark-purple lv1\"'}">
+			<span class="panel"></span>
+			<span class="copy">{cta_linklabel}</span>
+			<span class="icon icon-arrow-right-circle"></span>
+			</v:link.typolink>
+
+		</f:if>
+	</f:if>
+</f:if>
+

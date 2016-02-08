@@ -1,0 +1,186 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+
+<f:comment>
+	<f:render partial="stdHeader" arguments="{_all}"/>
+	<h1>{header}</h1>
+	<p>Layout: {layout}</p>
+	<p>Bodytext:</p>
+	<div style="border:1px solid #000;">
+		<f:format.html>{bodytext}</f:format.html>
+	</div>
+</f:comment>
+
+
+<f:if condition="{data.menu_type}==10">
+<v:variable.set name="pages" value="{m:getPagesForMenu(pages:'{data.pages}')}"/>
+
+	<div class="section benefits light">
+		<div class="tabs">
+			<div class="tab-menu">
+				<div class="container-fluid">
+					<ul>
+						<f:for each="{pages}" as="page" iteration='counter'>
+							<li>
+								<a href="#t{page.uid}"
+								<f:if condition="{counter.isFirst}">
+									class="is-open"
+								</f:if>
+								>
+								{page.title}
+								</a>
+							</li>
+						</f:for>
+					</ul>
+					<span class="pointer"></span>
+				</div>
+			</div>
+			<div class="tab-panels">
+				<div class="container-fluid">
+					<f:for each="{pages}" as="page" iteration='counter'>
+						<div id="t{page.uid}" class="tab-panel
+							<f:if condition="{counter.isFirst}">
+								is-open
+							</f:if>
+						">
+							<v:content.render column="0" pageUid="{page.uid}" />
+						</div>
+					</f:for>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:if>
+
+<f:if condition="{data.menu_type}==11">
+	<v:variable.set name="pages" value="{m:getPagesForMenu(pages:'{data.pages}')}"/>
+
+	<div class="section merchant-choose-product light">
+		<div class="container-fluid">
+			<div class="module-title">
+				<h2>{data.header}</h2>
+			</div>
+		</div>
+		<div class="tabs">
+			<div class="tab-menu">
+				<div class="container-fluid">
+					<ul>
+						<f:for each="{pages}" as="page" iteration='counter'>
+							<li>
+								<a href="#t{page.uid}"
+								<f:if condition="{counter.isFirst}">
+									class="is-open"
+								</f:if>
+								>
+								{page.title}
+								</a>
+							</li>
+						</f:for>
+					</ul>
+					<span class="pointer"></span>
+				</div>
+			</div>
+			<div class="tab-panels">
+				<div class="container-fluid">
+					<f:for each="{pages}" as="page" iteration='counter'>
+						<div id="t{page.uid}" class="tab-panel
+							<f:if condition="{counter.isFirst}">
+								is-open
+							</f:if>
+						">
+							<v:content.render column="0" pageUid="{page.uid}" />
+						</div>
+					</f:for>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</f:if>
+
+
+
+		<f:if condition="{data.menu_type}==12">
+			<v:variable.set name="pages" value="{m:getPagesForMenu(pages:'{data.pages}')}"/>
+			<div class="section affiliates light">
+				<div class="container-fluid">
+					<div class="module-container">
+						<ul class="accordion top-level">
+							<f:for each="{pages}" as="page" iteration='counter'>
+								<li>
+									<div class="accordion-wrap is-open">
+										<h2 class="accordion-trigger">
+											<a href="#">
+												<span class="icon icon-expand-large"></span>
+												<span class="icon icon-minimize-large"></span>
+												{page.title}
+											</a>
+										</h2>
+										<div class="accordion-content">
+											<v:content.render column="0" pageUid="{page.uid}" />
+										</div>
+									</div>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="html-overlay"><span class="pointer"></span>
+				<button title="Close overlay" class="close close-icon"><span class="icon icon-minimize-large"></span></button>
+				<h3>Embed this code on your site</h3>
+				<div class="embedded-code"></div>
+			</div>
+		</f:if>
+
+
+<f:if condition="{data.menu_type}==13">
+	<v:variable.set name="pages" value="{m:getPagesForMenu(pages:'{data.pages}')}"/>
+	<div class="row partners-list">
+
+		<f:for each="{pages}" as="page" iteration='counter'>
+			<div class="col-xs-6">
+				<div class="logo">
+					<f:if condition="{page.fal.0.identifier}">
+						<f:image src="fileadmin/{page.fal.0.identifier}" alt="{page.title}"/>
+					</f:if>
+				</div>
+				<h2>{page.title}</h2>
+				<f:link.page class="button button-light-purple lv1" pageUid="{page.uid}">
+					<span class="panel"></span>
+					<span class="copy">Find out more</span>
+					<span class="icon icon-arrow-right-circle"></span>
+				</f:link.page>
+			</div>
+		</f:for>
+		</div>
+
+</f:if>
+
+<f:if condition="{data.menu_type}==14">
+
+
+
+	<v:variable.set name="pages" value="{m:getPagesForMenu(pages:'{data.pages}')}"/>
+
+<br/>
+		<f:for each="{pages}" as="page" iteration='counter'>
+			<div class="col-md-6">
+				<f:link.page  pageUid="{page.uid}">
+					<f:if condition="{page.fal.0.identifier}">
+						<f:image src="fileadmin/{page.fal.0.identifier}" alt="{page.title}"/>
+					</f:if>
+				</f:link.page>
+				<div class="box">
+					<f:link.page  pageUid="{page.uid}">
+						<h2>{page.title}</h2>
+					</f:link.page>
+					<f:format.html>{page.abstract}</f:format.html>
+				</div>
+			</div>
+		</f:for>
+
+
+</f:if>

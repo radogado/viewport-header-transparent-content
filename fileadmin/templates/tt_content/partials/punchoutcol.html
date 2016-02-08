@@ -1,0 +1,12 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<div class="punchout-icon">
+	<div class="icon-holder">
+		<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+			<object data="fileadmin{fileReference.originalFile.identifier}" class="svg-icon-image {iconclass}"></object>
+		</f:for>
+	</div>
+</div>
+<div class="punchout-title"><h2>{header}</h2></div>
+<div class="punchout-copy">
+	<f:format.html>{bodytext}</f:format.html>
+</div>

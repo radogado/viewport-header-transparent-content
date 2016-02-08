@@ -1,0 +1,79 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<div class="section is-parallax punchout-image-3col {data.flexform_class}">
+	<div class="full-background-container">
+		<div style="background-image: url({background});" class="full-background-image anchor-left background-fixed">
+			<div class="background-data">
+				<span data-size="small" data-src="{background}"></span>
+				<span data-size="medium" data-src="{background}"></span>
+				<span data-size="large" data-src="{background}"></span>
+				<span data-size="wide" data-src="{background}"></span>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+
+		<f:if condition="{data.header_layout}==2">
+			<div class=row>
+				<div class=col-lg-12 style="background: #ededef;">
+					<h2 style="font-family: bebas_neuebold, Helvetica, Arial, sans-serif; font-size: 3em; color: #3b9092;padding-top: 1em;">
+						{data.header}
+					</h2>
+				</div>
+			</div>
+		</f:if>
+
+
+		<div class="row no-gutter">
+			<div class="col-md-4 {data.flexform_class1}">
+				<f:format.raw>{data.tx_gridelements_view_column_11}</f:format.raw>
+			</div>
+			<div class="col-md-4 {data.flexform_class2}">
+				<f:format.raw>{data.tx_gridelements_view_column_12}</f:format.raw>
+			</div>
+			<div class="col-md-4 {data.flexform_class3}">
+				<f:format.raw>{data.tx_gridelements_view_column_13}</f:format.raw>
+			</div>
+		</div>
+
+		<f:if condition="{data.flexform_cta_link}">
+			<div class="row no-gutter">
+				<div class="col-md-12" style="text-align:center; background: inherit; ">
+							<f:if condition="{data.tx_skrillbackend_theme}=='light'">
+								<v:link.typolink configuration="{parameter: data.flexform_cta_link, ATagParams: 'class=\"button button-light-purple lv1\"'}">
+								<span class="panel"></span>
+								<span class="copy">{data.flexform_cta_linklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+								</v:link.typolink>
+
+							</f:if>
+							<f:if condition="{data.tx_skrillbackend_theme}=='dark'">
+
+								<v:link.typolink configuration="{parameter: data.flexform_cta_link, ATagParams: 'class=\"button button-teal lv1\"'}">
+								<span class="panel"></span>
+								<span class="copy">{data.flexform_cta_linklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+								</v:link.typolink>
+
+							</f:if>
+							<f:if condition="{data.tx_skrillbackend_theme}=='white'">
+								<v:link.typolink configuration="{parameter: data.flexform_cta_link, ATagParams: 'class=\"button button-dark-purple lv1\"'}">
+								<span class="panel"></span>
+								<span class="copy">{data.flexform_cta_linklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+								</v:link.typolink>
+
+							</f:if>
+
+				</div>
+			</div>
+		</f:if>
+	</div>
+</div>
+
+
+
+
+
+
+

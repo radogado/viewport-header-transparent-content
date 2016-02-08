@@ -1,0 +1,25 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/SearchForm.html
+-->
+
+<f:section name="content">
+	<div class="news-search-form">
+		<f:form object="{search}" name="search" pageUid="{settings.listPid}">
+
+				<div class="form-group">
+
+					<f:form.textfield id="news-subject" property="subject"  placeholder="Search Previews" class="form-control"/>
+				</div>
+
+
+
+
+
+				<f:form.submit value="{f:translate(key:'search-start')}" class="btn btn-default fa fa-search" />
+
+		</f:form>
+	</div>
+</f:section>

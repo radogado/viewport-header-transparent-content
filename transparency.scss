@@ -21,7 +21,7 @@
 
 }
 
-.transparency main .row {
+.transparency #content > *:not(.transparent) {
 	
 	background: #fff;
 
@@ -36,7 +36,7 @@
     display: table;
     table-layout: fixed;
 	border-collapse: separate;
-	margin-top: -5px; // Fix a crack on narrow screens
+	margin: -5px 0 0 0; // Fix a crack on narrow screens
 	max-width: none;
 
 }

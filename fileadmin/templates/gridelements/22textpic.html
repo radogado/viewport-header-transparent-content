@@ -1,0 +1,189 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+
+<div class="section text-image-2col {data.tx_skrillbackend_theme}">
+	<div class="row">
+		<div class="container-fluid">
+			<div class="col-xs-12 col-md-6">
+				<f:for each="{data.tx_gridelements_view_children}" as="content">
+					<f:if condition="{content.tx_gridelements_columns}==50">
+						<h3><f:format.nl2br>{content.header}</f:format.nl2br></h3>
+						<div class="col-xs-12 col-md-4">
+							<div class="icon-holder">
+								<f:for each="{m:Fal(uid:content.uid)}" as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass}"></object>
+								</f:for>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-8">
+							<f:format.html>{content.bodytext}</f:format.html>
+							<f:link.page pageUid="{content.tx_skrillbackend_ctalink}" class="button lv1">
+								<span class="panel"></span>
+								<span class="copy">{content.tx_skrillbackend_ctalinklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</f:link.page>
+							<f:if condition="{content.tx_skrillbackend_ctalink2}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink2}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel2}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink3}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink3}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel3}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink4}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink4}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel4}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<f:for each="{data.tx_gridelements_view_children}" as="content">
+					<f:if condition="{content.tx_gridelements_columns}==51">
+						<h3><f:format.nl2br>{content.header}</f:format.nl2br></h3>
+						<div class="col-xs-12 col-md-4">
+							<div class="icon-holder">
+								<f:for each="{m:Fal(uid:content.uid)}" as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass}"></object>
+								</f:for>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-8">
+							<f:format.html>{content.bodytext}</f:format.html>
+							<f:link.page pageUid="{content.tx_skrillbackend_ctalink}" class="button lv1">
+								<span class="panel"></span>
+								<span class="copy">{content.tx_skrillbackend_ctalinklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</f:link.page>
+							<f:if condition="{content.tx_skrillbackend_ctalink2}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink2}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel2}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink3}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink3}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel3}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink4}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink4}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel4}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container-fluid">
+			<div class="col-xs-12 col-md-6">
+				<f:for each="{data.tx_gridelements_view_children}" as="content">
+					<f:if condition="{content.tx_gridelements_columns}==52">
+						<h3><f:format.nl2br>{content.header}</f:format.nl2br></h3>
+						<div class="col-xs-12 col-md-4">
+							<div class="icon-holder">
+								<f:for each="{m:Fal(uid:content.uid)}" as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass}"></object>
+								</f:for>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-8">
+							<f:format.html>{content.bodytext}</f:format.html>
+							<f:link.page pageUid="{content.tx_skrillbackend_ctalink}" class="button lv1">
+								<span class="panel"></span>
+								<span class="copy">{content.tx_skrillbackend_ctalinklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</f:link.page>
+							<f:if condition="{content.tx_skrillbackend_ctalink2}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink2}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel2}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink3}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink3}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel3}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink4}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink4}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel4}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<f:for each="{data.tx_gridelements_view_children}" as="content">
+					<f:if condition="{content.tx_gridelements_columns}==53">
+						<h3><f:format.nl2br>{content.header}</f:format.nl2br></h3>
+						<div class="col-xs-12 col-md-4">
+							<div class="icon-holder">
+								<f:for each="{m:Fal(uid:content.uid)}" as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass}"></object>
+								</f:for>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-8">
+							<f:format.html>{content.bodytext}</f:format.html>
+							<f:link.page pageUid="{content.tx_skrillbackend_ctalink}" class="button lv1">
+								<span class="panel"></span>
+								<span class="copy">{content.tx_skrillbackend_ctalinklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</f:link.page>
+							<f:if condition="{content.tx_skrillbackend_ctalink2}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink2}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel2}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink3}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink3}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel3}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+							<f:if condition="{content.tx_skrillbackend_ctalink4}">
+								<f:link.page pageUid="{content.tx_skrillbackend_ctalink4}" class="button lv1">
+									<span class="panel"></span>
+									<span class="copy">{content.tx_skrillbackend_ctalinklabel4}</span>
+									<span class="icon icon-arrow-right-circle"></span>
+								</f:link.page>
+							</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</div>
+	</div>
+</div>

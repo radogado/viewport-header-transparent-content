@@ -1,0 +1,56 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<a name="bannerOverlay"></a>
+	<div class="row" style="padding:10px 0 10px 0;">
+		<div class="twelve columns shopping_offer_mobile_backlink">
+			<f:comment>
+				<!--
+				<f:if condition="{linkBackWithParameter}==1">
+				  <f:then>
+					<a href="{linkBackWithParameterHref}" onclick="window.history.back();return false;">Back to overview</a>
+				  </f:then>
+				  <f:else>
+					<f:link.action action="list" controller="Category">Back to overview</f:link.action>
+				  </f:else>
+				</f:if>
+				-->
+			</f:comment>
+			<a href="javascript:window.history.back();">Back to overview</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelve columns shopping_offer_moblie_slider">
+			<f:if condition="{affiliateItem.file.originalResource.publicUrl}">
+				<f:then>
+					<f:image src="{affiliateItem.file.originalResource.publicUrl}" alt="" treatIdAsReference="1"/>
+				</f:then>
+				<f:else>
+					<f:image src="fileadmin/{affiliateItem.file}" alt="" />
+				</f:else>
+			</f:if>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelve columns shopping_offer_moblie_content">
+			<h3>{affiliateItem.description}</h3>
+			<p style="margin:15px 0 15px 0;">{affiliateItem.additionalinfo}</p>
+			<p style="word-wrap: break-word;width:90%;border: 1px solid #ddd;text-align: left;padding: 1em;margin: 1em 0;">
+				{affiliateCode}
+			</p>
+		</div>
+	</div>
+</f:section>

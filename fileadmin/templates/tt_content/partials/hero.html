@@ -1,0 +1,91 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:if condition="{theme}=='light'">
+	<f:if condition="{cta_link2}">
+		<div class="purple-hero-cta">
+	</f:if>
+	<div class="section is-parallax homepage-hero hero">
+		<div class="full-background-container">
+			<f:render partial="image" arguments="{_all}"/>
+		</div>
+		<div class="container-fluid is-parallax">
+			<div class="col-xs-12">
+				<div class="hero-content light-text">
+					<div class="hero-title">
+						<h2>{header}</h2>
+					</div>
+					<div class="hero-subtitle">
+						<h1>{subheader}</h1>
+					</div>
+					<div class="cta-holder">
+						<f:if condition="{cta_link}">
+							<v:link.typolink configuration="{parameter: cta_link, ATagParams: 'class=\"button hero-cta lv1 \"'}">
+								<span class="panel"></span>
+								<span class="copy">{cta_linklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</v:link.typolink>
+						</f:if>
+						<f:if condition="{cta_link2}">
+							<v:link.typolink configuration="{parameter: cta_link2, ATagParams: 'class=\"btn \"'}">
+							<span class="copy">{cta_linklabel2}</span>
+							</v:link.typolink>
+						</f:if>
+						<f:if condition="{bodytext}">
+							<f:format.html>{bodytext}</f:format.html>
+						</f:if>
+					</div>
+					<div class="scroll-button"><span class="icon icon-arrow-down"></span>
+						<div class="visually-hidden">Scroll down</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<f:if condition="{cta_link2}">
+		</div>
+	</f:if>
+</f:if>
+<f:if condition="{theme}=='dark'">
+	<f:if condition="{cta_link2}">
+		<div class="purple-hero-cta">
+	</f:if>
+	<div class="section is-parallax homepage-hero hero">
+		<div class="full-background-container">
+			<f:render partial="image" arguments="{_all}"/>
+		</div>
+		<div class="container-fluid is-parallax">
+			<div class="col-xs-12">
+				<div class="hero-content dark-text">
+					<div class="hero-title">
+						<h2>{header}</h2>
+					</div>
+					<div class="hero-subtitle">
+						<h1>{subheader}</h1>
+					</div>
+					<div class="cta-holder">
+						<f:if condition="{cta_link}">
+							<v:link.typolink configuration="{parameter: cta_link, ATagParams: 'class=\"button hero-cta lv1 \"'}">
+								<span class="panel"></span>
+								<span class="copy">{cta_linklabel}</span>
+								<span class="icon icon-arrow-right-circle"></span>
+							</v:link.typolink>
+							</f:if>
+						<f:if condition="{cta_link2}">
+							<v:link.typolink configuration="{parameter: cta_link2, ATagParams: 'class=\"btn \"'}">
+							<span class="copy">{cta_linklabel2}</span>
+							</v:link.typolink>
+						</f:if>
+						<f:if condition="{bodytext}">
+							<f:format.html>{bodytext}</f:format.html>
+						</f:if>
+					</div>
+					<div class="scroll-button"><span class="icon icon-arrow-down"></span>
+						<div class="visually-hidden">Scroll down</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<f:if condition="{cta_link2}">
+		</div>
+	</f:if>
+</f:if>

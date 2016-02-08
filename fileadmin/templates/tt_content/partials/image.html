@@ -1,0 +1,69 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+<f:comment>
+	<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+		<b>Title:</b> {fileReference.title}<br>
+		<b>Description:</b> {fileReference.description}<br>
+		<b>Alt Text:</b>{fileReference.alternative}<br>
+		<b>Identifier:</b>{fileReference.identifier}<br>
+		<f:image src="{fileReference.uid}" width="100" alt="{fileReference.alternative}" treatIdAsReference="1"/>
+	</f:for>
+</f:comment>
+
+<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+
+	<f:if condition="{data.colPos}==1">
+		<f:link.page pageUid="{fileReference.link}" >
+			<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+		</f:link.page>
+	</f:if>
+	<f:if condition="{data.colPos}==2">
+		<f:link.page pageUid="{fileReference.link}" >
+			<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+		</f:link.page>
+	</f:if>
+
+	<f:if condition="{data.colPos}==30">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==31">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==32">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==33">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==34">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==35">
+		<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+	</f:if>
+	<f:if condition="{data.colPos}==36">
+
+		<f:link.page pageUid="{fileReference.link}" class="carousel-offer">
+			<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}">
+		</f:link.page>
+	</f:if>
+
+
+	<f:if condition="{data.colPos}==0">
+		<f:if condition="{fileReference.link}!=''">
+			<f:then>
+				<f:format.html>
+					<link
+					{fileReference.link} >
+					<f:render partial="picture" arguments="{_all}"/>
+					</link>
+				</f:format.html>
+			</f:then>
+			<f:else>
+				<f:render partial="picture" arguments="{_all}"/>
+			</f:else>
+		</f:if>
+	</f:if>
+
+
+</f:for>

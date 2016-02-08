@@ -1,0 +1,20 @@
+<f:comment>
+<picture>
+	<source srcset="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, minWidth: 900, maxWidth: 1000)}"
+			media="(min-width: 1000px)">
+	<source srcset="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, minWidth: 800, maxWidth: 900)}" media="(min-width: 800px)">
+	<img srcset="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, minWidth: 20, maxWidth: 30)}" alt="{fileReference.alternative}">
+</picture>
+
+</f:comment>
+
+<div style="background-image: url({f:uri.image(src:fileReference.uid,treatIdAsReference:1, maxWidth: 768)});" class="full-background-image anchor-left background-fixed">
+	<div class="background-data">
+		<span data-size="small" data-src="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, maxWidth: 768)}"></span>
+		<span data-size="medium" data-src="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, maxWidth: 1024)}"></span>
+		<span data-size="large" data-src="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, maxWidth: 1200)}"></span>
+		<span data-size="wide" data-src="{f:uri.image(src:fileReference.uid,treatIdAsReference:1, maxWidth: 2560)}"></span>
+	</div>
+</div>
+
+

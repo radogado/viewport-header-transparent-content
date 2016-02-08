@@ -1,0 +1,80 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+
+<div class="section light">
+	<div class="container-fluid">
+		<div class="module-container">
+			<ul class="accordion top-level ">
+				<li>
+					<div class="accordion-wrap is-open">
+						<h2 class="accordion-trigger">
+							<a href="#">
+
+								<f:format.raw>{data.header}</f:format.raw>
+							</a>
+						</h2>
+						<div class="accordion-content">
+							<ul class="accordion top-level embedded-html">
+								<f:for each="{data.tx_gridelements_view_children}" as="content">
+
+									<li>
+										<div class="accordion-wrap">
+											<h4 class="accordion-trigger">
+												<a href="#">
+													<span class="icon icon-expand-small"></span>
+													<span class="icon icon-minimize-small"></span>
+													{content.header}
+												</a>
+											</h4>
+
+											<div class="accordion-content">
+												<f:format.html><p>{content.bodytext}</p></f:format.html>
+											</div>
+										</div>
+									</li>
+
+								</f:for>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+<f:comment>
+	<f:format.raw>{data.tx_gridelements_view_column_40}</f:format.raw>
+	<f:debug>{data}</f:debug>
+
+
+	<div class="section {m:ContentClass(layout:layout)} {theme}">
+		<div class="container-fluid">
+			<ul class="accordion top-level">
+				<li>
+					<div class="accordion-wrap">
+						<h2 class="accordion-trigger">
+							<a href="#">
+								<span class="icon icon-expand-large"></span>
+								<span class="icon icon-minimize-large"></span>
+								<f:format.raw>{data.header}</f:format.raw>
+							</a>
+						</h2>
+						<f:for each="{data.tx_gridelements_view_children}" as="content">
+							<div class="accordion-content">
+								{content.bodytext}
+							</div>
+						</f:for>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<f:format.raw>{data.tx_gridelements_view_column_40}</f:format.raw>
+	<f:debug>{data}</f:debug>
+
+
+</f:comment>
+

@@ -1,0 +1,78 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+
+<f:if condition="{imageorient}== 25">
+	<div class="section punchout-image right {theme}">
+</f:if>
+<f:if condition="{imageorient}==26">
+	<div class="section punchout-image left {theme}">
+</f:if>
+
+
+<div class="full-background-container">
+	<f:if condition="{background}">
+		<f:render partial="bgpicture" arguments="{_all}"/>
+
+	</f:if>
+</div>
+<div class="container-fluid">
+	<div class="row no-gutter top-spacer"></div>
+	<div class="row no-gutter content-row">
+
+		<f:if condition="{imageorient}== 25">
+			<div class="col-xs-12 col-md-6 col-full-height right-col">
+		</f:if>
+		<f:if condition="{imageorient}==26">
+			<div class="col-xs-12 col-md-6 col-full-height left-col">
+		</f:if>
+
+
+		<div class="punchout-icon">
+			<div class="icon-holder">
+				<object data="{svg}" class="svg-icon-image {iconclasssvg}"></object>
+
+				<f:comment>
+					<object data="{f:uri.image(src:svg)}" class="svg-icon-image dark-purple"></object>
+					<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+						<object data="fileadmin{fileReference.originalFile.identifier}"
+								class="svg-icon-image dark-purple"></object>
+					</f:for>
+				</f:comment>
+
+
+			</div>
+		</div>
+<f:if condition="{overlay}">
+		<div class="overlay-icon">
+			<div class="icon-holder">
+				<object data="{overlay}" class="svg-icon-image {iconclassoverlay} "></object>
+				<f:comment>
+					<object data="{f:uri.image(src:overlay)}" class="svg-icon-image teal "></object>
+				</f:comment>
+			</div>
+		</div>
+</f:if>
+
+	</div>
+
+	<f:if condition="{imageorient}== 25">
+		<div class="col-xs-12 col-md-6 col-full-height left-col">
+	</f:if>
+	<f:if condition="{imageorient}==26">
+		<div class="col-xs-12 col-md-6 col-full-height right-col">
+	</f:if>
+	<div class="column-content">
+		<div class="module-title">
+			<f:render partial="stdHeader" arguments="{_all}"/>
+		</div>
+		<div class="module-copy">
+			<f:format.html>{bodytext}</f:format.html>
+		</div>
+	</div>
+</div>
+</div>
+<div class="row no-gutter cta-holder">
+	<f:render partial="cta" arguments="{_all}"/>
+</div>
+</div>
+</div>

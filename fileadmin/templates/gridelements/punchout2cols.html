@@ -1,0 +1,34 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<div class="section is-parallax punchout-image-3col {data.flexform_class}">
+	<f:if condition="{background}">
+		<div class="full-background-container">
+			<div style="background-image: url({background});"
+				 class="full-background-image anchor-left background-fixed">
+				<div class="background-data">
+					<span data-size="small" data-src="{background}"></span>
+					<span data-size="medium" data-src="{background}"></span>
+					<span data-size="large" data-src="{background}"></span>
+					<span data-size="wide" data-src="{background}"></span>
+				</div>
+			</div>
+		</div>
+	</f:if>
+	<div class="container-fluid">
+		<div class="row no-gutter">
+			<div class="col-md-6 {data.flexform_class1}">
+				<f:format.raw>{data.tx_gridelements_view_column_10}</f:format.raw>
+			</div>
+			<div class="col-md-6 {data.flexform_class2}">
+				<f:format.raw>{data.tx_gridelements_view_column_11}</f:format.raw>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+

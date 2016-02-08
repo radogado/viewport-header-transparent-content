@@ -1,0 +1,25 @@
+
+
+<f:if condition="{imageorient}==26">
+
+<div style="background-image: url({f:uri.image(src:background, maxWidth: 768)});" class="full-background-image anchor-right with-offset background-fixed">
+	<div class="background-data">
+		<span data-size="small" data-src="{f:uri.image(src:background, maxWidth: 768)}"></span>
+		<span data-size="medium" data-src="{f:uri.image(src:background, maxWidth: 1024)}"></span>
+		<span data-size="large" data-src="{f:uri.image(src:background, maxWidth: 1200)}"></span>
+		<span data-size="wide" data-src="{f:uri.image(src:background, maxWidth: 2560)}"></span>
+	</div>
+</div>
+</f:if>
+
+<f:if condition="{imageorient}==25">
+
+	<div style="background-image: url({f:uri.image(src:background, maxWidth: 768)});" class="full-background-image anchor-left background-fixed">
+		<div class="background-data">
+			<span data-size="small" data-src="{f:uri.image(src:background, maxWidth: 768)}"></span>
+			<span data-size="medium" data-src="{f:uri.image(src:background, maxWidth: 1024)}"></span>
+			<span data-size="large" data-src="{f:uri.image(src:background, maxWidth: 1200)}"></span>
+			<span data-size="wide" data-src="{f:uri.image(src:background, maxWidth: 2560)}"></span>
+		</div>
+	</div>
+</f:if>

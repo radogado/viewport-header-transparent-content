@@ -1,0 +1,68 @@
+{namespace n=Tx_News_ViewHelpers}
+
+<f:layout name="Detail.html"/>
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+			<f:then>
+
+			<n:format.nothing>
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
+			</n:format.nothing>
+				<br>
+			<f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}"/>
+			<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
+
+
+			<div class="box">
+				<!-- date -->
+				<time>
+					<f:format.date format="l, d.m.Y">{newsItem.datetime}</f:format.date>
+				</time>
+
+
+				<f:if condition="{newsItem.author}">
+					<!-- author -->
+						<span class="news-list-author">
+							<f:translate key="author" arguments="{0:newsItem.author}"></f:translate>
+						</span>
+				</f:if>
+				<h2>{newsItem.title}</h2>
+
+				<!-- main text -->
+
+				<f:format.html>{newsItem.bodytext}</f:format.html>
+
+
+
+			</div>
+				<br>
+				<f:if condition="{settings.backPid}">
+					<!-- Link Back -->
+					<f:link.page pageUid="{settings.backPid}" class="button button-light-purple lv1">
+						<span class="panel"></span>
+						<span class="copy"><f:translate key="back-link"/></span>
+						<span class="icon icon-arrow-right-circle"></span>
+					</f:link.page>
+				</f:if>
+		</f:then>
+
+	</f:if>
+</f:section>

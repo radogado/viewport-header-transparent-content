@@ -1,0 +1,39 @@
+<div class="csc-default">
+	<div class="section trustmark-bar">
+		<div class="container-fluid">
+			<div data-arrow-controls="true" data-pagination="false" data-transition="fade" data-timer="5000"
+				 class="carousel">
+				<ul>
+					<li data-panel="1">
+						<h4 class="panel-title"><f:cObject typoscriptObjectPath="lib.trusttext"/></h4>
+						<ul class="client-logos">
+							<li class="col-xs-4 col-md-2">
+								<f:format.raw>{trustmark1}</f:format.raw>
+							</li>
+							<li class="col-xs-4 col-md-2">
+								<f:format.raw>{trustmark2}</f:format.raw>
+							</li>
+							<li class="col-xs-4 col-md-2">
+								<f:format.raw>{trustmark3}</f:format.raw>
+							</li>
+							<li class="col-md-2 xs-hidden sm-hidden">
+								<f:format.raw>{trustmark4}</f:format.raw>
+							</li>
+							<li class="col-md-2 xs-hidden sm-hidden">
+								<f:format.raw>{trustmark5}</f:format.raw>
+							</li>
+							<li class="col-md-2 xs-hidden sm-hidden">
+								<f:format.raw>{trustmark6}</f:format.raw>
+							</li>
+						</ul>
+					</li>
+					<f:if condition="{trustmark7}">
+						<li data-panel="2">
+								<f:format.raw>{trustmark7}</f:format.raw>
+						</li>
+					</f:if>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

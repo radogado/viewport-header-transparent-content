@@ -1,0 +1,74 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+
+<f:comment>
+
+	<div style="border:1px solid #0F0;">
+		<p>stdHeader.html Partial</p>
+
+		<h1>{header}</h1>
+
+		<p>Header Layout: {header_layout}</p>
+
+		<p>Header Position: {header_position}</p>
+		<hr>
+	</div>
+</f:comment>
+<f:if condition="{header}">
+	<f:if condition="{header_layout} == 5">
+		<h5 class="{header_position}">
+			<f:link.page pageUid="{header_link}">{header}</f:link.page>
+		</h5>
+		<f:if condition="{subheader}">
+			<h6>{subheader}</h6>
+		</f:if>
+	</f:if>
+	<f:if condition="{header_layout} == 4">
+		<h4 class="{header_position}">
+			<f:link.page pageUid="{header_link}">{header}</f:link.page>
+		</h4>
+		<f:if condition="{subheader}">
+			<h5>{subheader}</h5>
+		</f:if>
+	</f:if>
+	<f:if condition="{header_layout} == 3">
+		<h3 class="{header_position}">
+			<f:link.page pageUid="{header_link}">{header}</f:link.page>
+		</h3>
+		<f:if condition="{subheader}">
+			<h4>{subheader}</h4>
+		</f:if>
+	</f:if>
+	<f:if condition="{header_layout} == 2">
+		<h2 class="{header_position}">
+			<f:link.page pageUid="{header_link}">{header}</f:link.page>
+		</h2>
+		<f:if condition="{subheader}">
+			<h3>{subheader}</h3>
+		</f:if>
+	</f:if>
+	<f:if condition="{header_layout} == 1">
+		<h1 class="{header_position}">
+			<f:link.page pageUid="{header_link}">{header}</f:link.page>
+		</h1>
+		<f:if condition="{subheader}">
+			<h2>{subheader}</h2>
+		</f:if>
+	</f:if>
+	<f:if condition="{header_layout} == 0">
+		<h2 class="{header_position}">
+			<f:link.page pageUid="{header_link}"><m:ReplaceString string="{header}" searchFor="|" replaceWith="<br>" /></f:link.page>
+
+		</h2>
+		<f:if condition="{subheader}">
+			<h3>{subheader}</h3>
+		</f:if>
+	</f:if>
+</f:if>
+
+
+
+
+
+
+

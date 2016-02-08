@@ -1,0 +1,252 @@
+{namespace n=Tx_News_ViewHelpers}
+
+<f:layout name="Detail.html"/>
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+<f:if condition="{newsItem}">
+<f:then>
+<div class="centered-column">
+<n:format.nothing>
+	<f:if condition="{newsItem.alternativeTitle}">
+		<f:then>
+			<n:titleTag>
+				<n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
+			</n:titleTag>
+		</f:then>
+		<f:else>
+			<n:titleTag>
+				<n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
+			</n:titleTag>
+		</f:else>
+	</f:if>
+	<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}"/>
+</n:format.nothing>
+
+<f:if condition="{settings.backPid}">
+	<!-- Link Back -->
+	<div class="news-backlink-wrap">
+		<f:link.page pageUid="{settings.backPid}" class="button">
+			<f:translate key="back-link"/>
+		</f:link.page>
+	</div>
+	<div class="divider">
+		<hr></div>
+</f:if>
+
+<div class="footer">
+	<p>
+		<!-- date -->
+					<span class="news-list-date">
+						<n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
+					</span>
+
+		<f:if condition="{newsItem.categories}">
+			<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}"/>
+		</f:if>
+
+		<f:if condition="{newsItem.tags}">
+			<!-- Tags -->
+						<span class="news-list-tags">
+						<f:for each="{newsItem.tags}" as="tag">
+							{tag.title}
+						</f:for>
+						</span>
+		</f:if>
+
+		<f:if condition="{newsItem.author}">
+			<!-- author -->
+						<span class="news-list-author">
+							<f:translate key="author" arguments="{0:newsItem.author}"></f:translate>
+						</span>
+		</f:if>
+
+
+		<a target="_blank"
+		   href='http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https://www.skrill.com<f:uri.action pageUid="{settings.detailPid}" action="detail"  controller="News" pluginName="pi1" extensionName="news" arguments="{news: newsItem.uid}"/>&amp;p[title]=<f:format.urlencode>{newsItem.title}</f:format.urlencode>&amp;p[summary]=<f:format.urlencode>{newsItem.teaser}</f:format.urlencode>'
+		   onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+		   class="facebook">
+			<span class="fa fa-facebook facebook"></span>
+		</a>
+
+
+		<a target="_blank"
+		   href="http://twitter.com/home?status=<f:format.crop maxCharacters='140'><f:format.urlencode>{newsItem.title}-{newsItem.teaser}</f:format.urlencode></f:format.crop>"
+		   onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+		   class="twitter">
+			<span class="fa fa-twitter twitter"></span>
+		</a>
+
+		<a target="_blank"
+		   href='https://plus.google.com/share?url=https://www.skrill.com<f:uri.action pageUid="{settings.detailPid}" action="detail"  controller="News" pluginName="pi1" extensionName="news" arguments="{news: newsItem.uid}"/>'
+		   onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+		   class="google">
+			<span class="fa fa-google-plus google"></span>
+		</a>
+		<a href='mailto:?subject=<f:format.urlencode>{newsItem.title}-{newsItem.teaser}</f:format.urlencode>&amp;body=<f:format.urlencode>https://www.skrill.com<f:uri.action pageUid="{settings.detailPid}" action="detail"  controller="News" pluginName="pi1" extensionName="news" arguments="{news: newsItem.uid}"/></f:format.urlencode>%0D%0A<f:format.urlencode>{newsItem.teaser}</f:format.urlencode>'
+		   class="email">
+			<span class="fa fa-envelope"></span>
+		</a>
+	</p>
+</div>
+
+<div class="header">
+	<h3>{newsItem.title}</h3>
+</div>
+<f:comment>
+	<f:if condition="{newsItem.teaser}">
+		<!-- teaser -->
+		<div class="teaser-text">
+			<f:format.html>{newsItem.teaser}</f:format.html>
+		</div>
+	</f:if>
+</f:comment>
+<f:if condition="{newsItem.contentElements}">
+	<!-- content elements -->
+	<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+</f:if>
+
+<f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}"/>
+<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}"/>
+
+<!-- main text -->
+<div class="news-text-wrap">
+	<f:format.html>{newsItem.bodytext}</f:format.html>
+</div>
+
+
+<f:comment>
+	<f:if condition="{settings.detail.showSocialShareButtons}">
+		<div class="facebook">
+			<div class="like">
+				<n:social.facebook.like></n:social.facebook.like>
+			</div>
+			<div class="share">
+				<n:social.facebook.share>Share</n:social.facebook.share>
+			</div>
+			<div class="twitter">
+				<n:social.twitter>Twitter</n:social.twitter>
+			</div>
+		</div>
+	</f:if>
+</f:comment>
+<!-- related things -->
+<div class="news-related-wrap">
+
+	<f:if condition="{newsItem.allRelatedSorted}">
+		<!-- Related news records -->
+		<div class="news-related news-related-news">
+			<h4>
+				<f:translate key="related-news"/>
+			</h4>
+			<ul>
+				<f:for each="{newsItem.allRelatedSorted}" as="related">
+					<li>
+						<span class="news-related-news-date"><n:format.date format="{f:translate(key:'dateFormat')}">
+							{related.datetime}
+						</n:format.date></span>
+						<n:link newsItem="{related}" settings="{settings}">
+							{related.title}
+						</n:link>
+					</li>
+
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+
+	<f:if condition="{newsItem.relatedFiles}">
+		<!-- Related files -->
+		<div class="news-related news-related-files">
+			<h4>
+				<f:translate key="related-files"/>
+			</h4>
+			<ul>
+				<f:for each="{newsItem.relatedFiles}" as="relatedFile">
+					<li>
+									<span class="news-related-files-link">
+										<n:format.fileDownload file="uploads/tx_news/{relatedFile.file}"
+															   configuration="{settings.relatedFiles.download}">
+											<f:if condition="{relatedFile.title}">
+												<f:then>
+													{relatedFile.title}
+												</f:then>
+												<f:else>
+													{relatedFile.file}
+												</f:else>
+											</f:if>
+										</n:format.fileDownload>
+									</span>
+									<span class="news-related-files-size">
+										<n:format.fileSize file="uploads/tx_news/{relatedFile.file}"
+														   format="{settings.relatedFiles.fileSizeLabels}"/>
+									</span>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+
+	<f:if condition="{newsItem.falRelatedFiles}">
+		<!-- FAL related files -->
+		<div class="news-related news-related-files">
+			<h4>
+				<f:translate key="related-files"/>
+			</h4>
+			<ul>
+				<f:for each="{newsItem.falRelatedFiles}" as="relatedFile">
+					<li>
+									<span class="news-related-files-link">
+										<n:format.fileDownload file="{relatedFile.originalResource.publicUrl}"
+															   configuration="{settings.relatedFiles.download}">
+											<f:if condition="{relatedFile.originalResource.title}">
+												<f:then>
+													{relatedFile.originalResource.title}
+												</f:then>
+												<f:else>
+													{relatedFile.originalResource.name}
+												</f:else>
+											</f:if>
+										</n:format.fileDownload>
+									</span>
+									<span class="news-related-files-size">
+										<n:format.fileSize fileSize="{relatedFile.originalResource.size}"
+														   format="{settings.relatedFiles.fileSizeLabels}"/>
+									</span>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+
+	<f:if condition="{newsItem.relatedLinks}">
+		<!-- Related links -->
+		<div class="news-related news-related-links">
+			<h4>
+				<f:translate key="related-links"/>
+			</h4>
+			<ul>
+				<f:for each="{newsItem.relatedLinks}" as="relatedLink">
+					<li>
+						<f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}"
+									 target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title,
+							then: relatedLink.title, else: relatedLink.uri)}
+						</f:link.page>
+						<f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+</div>
+</div>
+</f:then>
+<f:else>
+
+</f:else>
+</f:if>
+</f:section>

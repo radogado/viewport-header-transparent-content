@@ -1,0 +1,8 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<div style="border:2px solid #00F;margin-top:20px;padding:10px;">
+	<h1>{header}</h1>
+	<p>{bodytext}</p>
+	<f:link.page pageUid="{header_link}">{header}</f:link.page>
+	<p><b>Getting the FAL References of this content element and looping through them:</b></p>
+	<f:render partial="images" arguments="{_all}" />
+</div>

@@ -1,0 +1,7 @@
+{namespace n=Tx_News_ViewHelpers}
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+
+		<f:render section="content" />

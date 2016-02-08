@@ -1,0 +1,25 @@
+
+<f:if condition="{0:layout} == {0:'bottom'}">
+    <f:then>
+        <div>
+            <div>
+                <h3>{headline}</h3>
+                <f:format.html><p>{description}</p></f:format.html>
+                <img src="{pic}" alt="{headline}" />
+                <f:link.page pageUid="{data.link}" >link</f:link.page>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <div>
+            <div>
+                <img src="{pic}" alt="{headline}" />
+                <h3>{headline}</h3>
+                <f:format.html><p>{description}</p></f:format.html>
+                <f:link.page pageUid="{data.link}">link</f:link.page>
+            </div>
+        </div>
+
+    </f:else>
+</f:if>
+

@@ -1,0 +1,51 @@
+div {
+  box-sizing: border-box; }
+
+body {
+  background: #574f67; }
+
+.browser-upgrade-page {
+  background: #574f67;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+
+#content {
+  display: none; }
+
+.header {
+  background: #4c455c;
+  border-bottom: 1px solid #696376; }
+  .header img {
+    display: block; }
+
+.upgrade {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 5%;
+  text-align: center;
+  color: #ffffff; }
+  .upgrade img.title {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px; }
+
+.browsers {
+  margin-top: 50px; }
+  .browsers .col {
+    width: 24%;
+    float: left;
+    text-align: center;
+    vertical-align: top; }
+    .browsers .col img {
+      width: 80%; }
+    .browsers .col a {
+      color: #fff;
+      text-decoration: none; }
+      .browsers .col a:hover {
+        text-decoration: underline; }

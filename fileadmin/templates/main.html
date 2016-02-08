@@ -1,0 +1,21 @@
+<f:layout name="main_layout"/>
+<f:section name="wrapper">
+
+	<f:render partial="gtm"/>
+	<f:render partial="cookie" arguments="{_all}"/>
+	<f:render partial="ie8"/>
+
+	<f:render partial="head"/>
+
+	<div id="content" role="main">
+		<f:format.raw>{content_hero}</f:format.raw>
+		<f:if condition="{data.backend_layout}==2">
+			<f:render partial="trustmarkbar" arguments="{_all}"/>
+		</f:if>
+
+		<f:format.raw>{content_main}</f:format.raw>
+
+		<f:render partial="footer"/>
+	</div>
+	<div id="page-overlay"></div>
+</f:section>

@@ -1,0 +1,1000 @@
+/* Promo Centre 2016 Neteller for the BIO Skrill site */
+
+body {
+	
+	font-size: 16px;
+	background: #eceeee;
+
+}
+
+body, .sub-nav, h2, h3, .button {
+	
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0;
+
+}
+
+p a[href] {
+	
+	color: inherit;
+
+}
+
+h2, h3 {
+	
+	color: inherit;
+
+}
+
+button.menu-toggle, .sub-nav.level1 li.active:before, .sub-nav.level1 li.active:after {
+	
+	display: none;
+
+}
+
+nav#nav {
+	
+	font-family: inherit;
+
+}
+
+
+header nav {
+	
+	display: inline-block;
+	line-height: 5.3em;
+	float: left;
+
+}
+
+header nav:last-child {
+	
+	float: right;
+	padding-right: 1em;
+
+}
+
+header nav a {
+
+	padding: 0 .5em;
+	display: inline-block;
+	line-height: 5.85rem;
+
+}
+
+header nav li.active a {
+
+	background: #649125;
+
+}
+
+header#header.is-fixed nav li.active a {
+
+	color: #fff;
+
+}
+
+#header .header-background {
+
+	background: #81bb2f;
+
+}
+
+#header .header-wrapper .site-title {
+	
+	margin-right: 0;
+	background: #81bb2f url(/fileadmin/templates/images/promo/neteller-showcase.png) center center no-repeat;
+	border-right: 2em solid #81bb2f;
+	border-left: 1em solid #81bb2f;
+	box-sizing: content-box;
+
+}
+
+div.header-wrapper {
+	
+	white-space: nowrap;
+
+}
+
+#header .header-wrapper {
+	
+	text-transform: none;
+
+}
+
+.carousel .icon-arrow-left-thin, .carousel .icon-arrow-right-thin {
+	
+	display: none;
+	
+}
+
+.carousel .row {
+	
+	margin-left: 0;
+
+}
+
+.carousel .pagination {
+	
+	display: inline-block;
+	bottom: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: auto;
+
+}
+
+.carousel .pagination a {
+	
+	background: #fff;
+	
+}
+
+.carousel .pagination a.active {
+	
+	background: #83ba3b;
+	border-color: #83ba3b;
+	cursor: pointer;
+	
+}
+
+.sub-nav {
+	
+	overflow: visible;
+	background: #fff;
+
+}
+
+.sub-nav a {
+	
+	text-transform: none;
+	font-size: .55em;
+	padding: 1.7em 0 1.7em 1em;
+
+}
+
+.no-touch .sub-nav a {
+	
+	padding-right: 2em;
+
+}
+
+.sub-nav .active a {
+
+	color: #83ba3b;	
+	
+}
+
+.sub-nav a img {
+	
+	display: inline-block;
+	height: 2em;
+	vertical-align: middle;
+	margin-right: .5em;
+	width: auto;
+
+}
+
+.sub-nav ul li {
+
+	position: relative;
+	margin-right: .5em;
+	
+}
+
+.no-touch .sub-nav ul li {
+
+	margin-right: 0;
+	
+}
+
+.sub-nav ul ul {
+	
+	position: absolute;
+	display: block;
+	top: 5.65rem;
+	background: #fff;
+	z-index: 1;
+	right: 0;
+	left: 0;
+	height: 0;
+	
+}
+
+.sub-nav ul ul li {
+	
+	font-size: 0;
+
+}
+
+.sub-nav ul ul:before, .sub-nav.level1 ul ul:before {
+	
+	content: '';
+	display: block;
+	width: 20px;
+	height: 1em;
+	background: url(/fileadmin/templates/images/promo/arrow.png) center center no-repeat;
+// 	background-position: calc(100% - 1rem) center;
+	position: absolute;
+    top: -4rem;
+	right: 0;
+	left: auto;
+	cursor: pointer;
+	
+}
+
+.no-touch .sub-nav ul li:hover ul {
+
+	display: block;
+	height: auto;
+	text-align: left;
+	
+}
+
+.no-touch .sub-nav li:hover ul li {
+	
+	line-height: 1;
+	display: block;
+	font-size: 1.5rem;
+	font-size: 1rem;
+	
+}
+
+.sub-nav ul li input[type=checkbox] {
+
+	height: 1.5em;
+	width: 1.5em;
+	background: #fff;
+	clip: initial;
+	position: static;
+	opacity: 0;
+	margin: 0;
+	vertical-align: middle;
+	z-index: 1;
+
+}
+
+.no-touch .sub-nav ul li input[type=checkbox] {
+	
+	display: none;
+
+}
+
+.sub-nav ul li :checked ~ ul {
+
+	display: block;
+	height: auto;
+	text-align: left;
+	
+}
+
+.sub-nav ul li :checked ~ ul li {
+
+	line-height: 1;
+	display: block;
+	font-size: 1.5rem;
+	font-size: 1rem;
+	
+}
+
+.sub-nav li ul a {
+	
+	padding: 0;
+	text-align: left;
+	font-size: 1.1em;
+	line-height: 2;
+	color: #9b9b9b;
+	padding-left: 1em;
+	display: block;
+	
+}
+
+.sub-nav li ul li:hover a {
+	
+	color: #fff;
+	
+}
+
+.sub-nav li ul li:hover {
+	
+	background: #649125;
+	
+}
+
+.box {
+	
+	background: #fff;
+
+}
+
+.box h2 {
+	
+	margin-top: .3em;
+	font-size: 1.7em;
+
+}
+
+/* Button */
+
+.button.button-light-purple .icon, .button.button-light-purple .panel {
+	
+	display: none;
+	
+}
+
+.button.button-light-purple, .button.button-light-purple:hover {
+	
+	background: #82bc2f;
+	border-radius: 9px;
+	text-align: center;
+	letter-spacing: 0;
+	
+}
+
+.carousel-wrap .button.button-light-purple, .carousel-wrap .button.button-light-purple:hover, .promo .button.button-light-purple, .promo .button.button-light-purple:hover {
+	
+	background: #34a2c4;
+	border-radius: 9px;
+	text-align: center;
+	
+}
+
+a.button .copy, a.button:hover .copy {
+	
+	letter-spacing: 0;
+	font-size: 16px;
+
+}
+
+.button.button-light-purple {
+	
+	border: none;
+	width: auto;
+
+}
+
+.button .copy, .button:hover .copy {
+	
+	color: #fff;
+	display: block;
+	text-align: center;
+	text-transform: none;
+	float: none;
+	padding: 0;
+	letter-spacing: 1px;
+	
+}
+
+.button {
+	
+	transition: none;
+	
+}
+
+/* Calendar */
+
+.calendar {
+	
+	border-radius: 10px;
+	margin-bottom: 1em;
+
+}
+
+.calendar table {
+	
+	margin-bottom: 0;
+	
+}
+
+.calendar a {
+	
+	color: #626262;
+	
+}
+
+.calendar table th {
+	
+	background: #82bc2f;
+	font-size: 1.5em;
+	
+}
+
+.calendar table th, .steps li strong {
+	
+	font-family: inherit;
+
+}
+
+.calendar table td {
+	
+	padding: .5em 0;
+	background: #fff;
+	
+}
+
+.calendar table .active td {
+	
+	background: #34a2c4;
+
+}
+
+/* Partners */
+
+.partners-list {
+
+	width: calc(100% + 20px);
+	margin-left: -10px;
+
+}
+
+.partners-list .logo, .partner .logo, .carousel .logo, .promo .logo {
+	
+	width: 100%;
+	border-radius: 0;
+	margin: 0;
+	
+}
+
+.partners-list .logo {
+	
+	background: #f8f8f8;
+	width: 100%;
+	max-width: none;
+
+}
+
+.partners-list h2 {
+	
+	font-size: 1.8em;
+
+}
+
+.steps li strong:before, .steps li strong:before, .partners-list .logo:before, .partner .logo:before, .carousel .logo:before, .promo .logo:before, .partners-list .logo:after, .partner .logo:after, .carousel .logo:after, .promo .logo:after {
+	
+	display: none;
+
+}
+
+.box.row.auto.promo > * {
+	
+	vertical-align: middle;
+
+}
+
+.box.row.auto.promo > *:first-child {
+	
+	width: 172px;
+
+}
+
+.box.promo h2 {
+	
+	color: #000;
+	margin: .5em 0;
+	font-size: 1.5em;
+
+}
+
+.box.partner {
+	
+	margin-top: 1.5em;
+
+}
+
+.box.partner h2 {
+	
+	text-align: left;
+
+}
+
+.section {
+	
+	background: none;
+
+}
+
+div.white {
+	
+	background: #fff;
+
+}
+
+/* Display steps on Partner page on top */
+.partner .container-fluid {
+	
+	display: flex;
+	flex-flow: column nowrap;
+	
+}
+
+.partner .container-fluid > div {
+	
+	order: 2;
+	width: 100%;
+
+}
+
+.partner .container-fluid > div.banners {
+	
+	order: 1;
+
+}
+
+/* How to register steps */
+
+.steps h2 {
+	
+	color: #485161;
+	text-align: left;
+	margin: 0 0 .3em 0;
+
+}
+
+.steps li {
+	
+	background: #34a2c4;
+
+}
+
+.steps li strong, .steps li p {
+	
+	color: #fff;
+	border: none;
+	margin: .5em 0;
+	padding: 0;
+
+}
+
+.section.partner .container-fluid {
+	
+	display: flex;
+	
+}
+
+.section.partner .container-fluid > * {
+	
+	order: 2;	
+	width: 100%;
+
+}
+
+.section.partner .container-fluid > *.banners {
+	
+	order: 1;
+
+}
+
+.section.partner .steps ol {
+	
+	display: table;
+	table-layout: fixed;
+	border-spacing: 1em;
+	margin-left: -15px;
+	width: calc(100% + 30px);
+	margin-bottom: 0;
+	
+}
+
+.section.partner .steps ol > li {
+
+	display: table-cell;
+	padding: 1em;
+
+}
+
+time {
+	
+	font-style: normal;
+	font-size: .8em;
+	
+}
+
+/* Carousel */
+
+.carousel {
+	
+	padding: 4em 1em;
+	
+}
+
+.carousel h2, .carousel h2 b, .carousel p {
+	
+	color: #fff;
+	text-transform: none;
+	text-align: center;
+	
+}
+
+.carousel h2, .carousel b {
+	
+	font-weight: 300;
+
+}
+
+.carousel h2 {
+	
+	font-size: 2.2em;
+
+}
+
+.carousel li {
+	
+	text-align: center;
+	
+}
+
+.carousel p {
+	
+	margin: .7em;
+	font-size: 1.2em;
+	
+}
+
+.banners .box {
+	
+	background: #fff;
+	
+}
+
+.calendar .prev a:before, .calendar .next a:before {
+	
+	color: #ccc;
+	
+}
+
+@media screen and (max-width: 480px) {
+
+	#header .header-wrapper .site-title {
+		
+		display: none;
+
+	}
+
+}
+
+@media screen and (max-width: 1200px) {
+
+	header nav {
+		
+		line-height: 3em;
+		font-size: .8em;
+	
+	}
+
+	#header .header-wrapper .site-title {
+		
+		background-size: contain;
+	
+	}
+
+	header nav a {
+	
+		line-height: 4.4rem;
+	
+	}
+	
+	div#content {
+		
+		margin-top: 0;
+
+	}
+	
+	#header .header-wrapper .site-title, #header {
+		
+		height: 62px;
+
+	}
+	
+	.sub-nav {
+		
+		font-size: 1.3em;
+
+	}
+	
+	.sub-nav ul ul {
+		
+		top: 4.3rem;
+
+	}
+	
+	.sub-nav li ul a {
+		
+		font-size: .8em;
+		
+	}
+
+	.sub-nav ul ul:before, .sub-nav.level1 ul ul:before {
+		
+	    top: -3rem;
+		
+	}
+
+	.calendar {
+	
+		font-size: .8em;
+	
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	button.menu-toggle {
+		
+		display: block;
+
+	}
+	
+	header nav.login {
+		
+		display: none;
+
+	}
+
+	.section.partner .container-fluid > * {
+		
+		order: 1;
+	
+	}
+	
+	.section.partner .container-fluid > *.banners {
+		
+		order: 2;
+	
+	}
+	
+	.section.partner .steps ol, .section.partner .steps ol>li {
+		
+		display: block;
+
+	}
+	
+	.sub-nav ul ul:before, .sub-nav.level1 ul ul:before {
+		
+	    top: -3rem;
+		
+	}
+
+	.sub-nav ul ul {
+		
+		top: 4.3rem;
+		
+	}
+	
+	.calendar {
+	
+		font-size: .7em;
+	
+	}
+
+}
+
+/* Neteller footer */
+
+footer#site-footer {
+    margin-top: 3.125rem;
+    background-color: #373737;
+    color: #c0c0c0;
+    padding: 0 0 1.25rem 0;
+    padding: 1em;
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer {
+        padding-bottom: 2.5rem;
+    }
+}
+
+footer#site-footer h5 {
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #646464;
+    padding-bottom: 0.3125rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-size: 1.125rem
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer h5 {
+        margin-top: 1.25rem;
+    }
+}
+
+footer#site-footer nav {
+    padding-top: 0.625rem;
+    margin-bottom: 1.25rem
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer nav {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer nav {
+        margin-bottom: 1.875rem;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer nav ul.nav-grid > li:last-child {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer nav ul.ca-footer > li:last-child {
+        width: 50%;
+    }
+}
+
+footer#site-footer ul {
+    font-size: 0.875rem
+}
+
+footer#site-footer ul.social {
+    padding: 0
+}
+
+footer#site-footer ul.social:before, footer#site-footer ul.social:after {
+    content: " ";
+    display: table
+}
+
+footer#site-footer ul.social:after {
+    clear: both
+}
+
+footer#site-footer ul.social li {
+    float: left;
+    margin-left: 0.875rem;
+    margin-bottom: 0.875rem
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer ul.social li {
+        padding-bottom: 0;
+        margin-bottom: 0.25rem !important;
+    }
+}
+
+@media only screen and (min-width:64.063em) {
+    footer#site-footer ul.social li {
+        margin-bottom: 0;
+    }
+}
+
+footer#site-footer ul.social li:nth-child(3) {
+    clear: both;
+    margin-left: 0
+}
+
+@media only screen and (min-width:64.063em) {
+    footer#site-footer ul.social li:nth-child(3) {
+        margin-left: 0.875rem;
+        clear: none;
+    }
+}
+
+footer#site-footer ul.social li:first-child {
+    margin-left: 0
+}
+
+footer#site-footer a {
+    color: #c0c0c0
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer li, footer#site-footer a {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+footer#site-footer #powered-by {
+    background-color: #2f2f2f;
+    text-align: center;
+    padding: 1.5625rem;
+    font-size: 1.125rem
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer #powered-by {
+        padding: 2.5rem;
+        font-size: 1.375rem;
+    }
+}
+
+footer#site-footer #powered-by img {
+    vertical-align: middle;
+    margin: -0.25rem 0.625rem 0
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer #powered-by img {
+        max-width: 12.5rem;
+    }
+}
+
+footer#site-footer #copyright {
+    margin-top: 1.25rem;
+    font-size: 0.6875rem;
+    color: #6e6e6e;
+    background: url(../images/verisign.png) no-repeat bottom center;
+    min-height: 50px;
+    padding-right: 120px;
+}
+
+@media only screen and (max-width: 40em) {
+    footer#site-footer #copyright {
+        padding-bottom: 3.75rem;
+    }
+}
+
+@media only screen and (min-width:40.063em) {
+    footer#site-footer #copyright {
+        margin-top: 2.5rem;
+        background-position: top right;
+    }
+}
+
+footer#site-footer ul {
+	
+	padding: 0;
+	
+}
+
+footer#site-footer > * {
+	
+	max-width: 1000px;
+	margin: 0 auto;
+	
+}
+
+footer#site-footer ul.row {
+	
+	margin: 1em;
+	list-style: none;
+	font-size: 0;
+	
+}
+
+footer#site-footer ul.row .row {
+	
+	margin: 0;
+
+}
+
+footer#site-footer ul.row li {
+	
+	list-style: none;
+	font-size: 1rem;	
+
+}
+
+footer#site-footer ul.row > li {
+	
+	width: 20%;
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+footer#site-footer img {
+	
+	display: inline-block;
+	
+}
+
+@media screen and (max-width: 767px) {
+
+	footer#site-footer ul.row > li {
+		
+		width: 50%;
+	
+	}
+
+}

@@ -1,0 +1,392 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<f:comment>
+	<f:render partial="stdHeader" arguments="{_all}"/>
+	<h1>{header}</h1>
+
+	<p>Layout: {layout}</p>
+
+	<p>orient: {imageorient}</p>
+
+	<p>Bodytext:</p>
+
+	<div style="border:1px solid #000;">
+		<f:format.html>{bodytext}</f:format.html>
+	</div>
+</f:comment>
+
+
+<f:if condition="{data.tx_gridelements_columns}==11">
+	<f:render partial="punchoutcol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==12">
+	<f:render partial="punchoutcol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==13">
+	<f:render partial="punchoutcol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==14">
+	<f:render partial="punchoutcol" arguments="{_all}"/>
+</f:if>
+
+<f:if condition="{data.tx_gridelements_columns}==21">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==22">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==23">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==24">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==25">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==26">
+	<f:render partial="stepcirclecol" arguments="{_all}"/>
+</f:if>
+<f:if condition="{data.tx_gridelements_columns}==40">
+	<f:render partial="timelineitem" arguments="{_all}"/>
+</f:if>
+
+<f:if condition="{data.colPos}==0">
+<f:then>
+
+	<f:if condition="{layout}==1">
+		<f:render partial="hero" arguments="{_all}"/>
+	</f:if>
+	<f:if condition="{layout}==2">
+		<f:if condition="{imageorient}== 26">
+			<div class="section is-parallax fullbleed-level2-hero solid-box right hero">
+		</f:if>
+		<f:if condition="{imageorient}==25">
+			<div class="section is-parallax fullbleed-level2-hero solid-box left hero">
+		</f:if>
+
+		<div class="full-background-container">
+			<f:render partial="image" arguments="{_all}"/>
+		</div>
+		<div class="container-fluid">
+			<f:if condition="{imageorient}== 26">
+				<div class="col-xs-12 col-sm-5 col-md-6 col-full-height left-col"></div>
+			</f:if>
+			<div class="col-xs-12 col-sm-7 col-md-6 col-full-height">
+				<div class="box-holder">
+					<div class="box">
+						<div class="box-title">
+							<h1>{header}</h1>
+						</div>
+
+						<div class="box-copy">
+							<f:format.html>{bodytext}</f:format.html>
+						</div>
+						<f:render partial="cta" arguments="{_all}"/>
+					</div>
+				</div>
+			</div>
+
+			<f:if condition="{imageorient}==25">
+				<div class="col-xs-12 col-sm-5 col-md-6 col-full-height right-col"></div>
+			</f:if>
+
+			<div class="scroll-button">
+				<span class="icon icon-arrow-down"></span>
+
+				<div class="visually-hidden">Scroll down</div>
+			</div>
+		</div>
+		</div>
+
+	</f:if>
+
+	<f:if condition="{layout}==18">
+		<f:if condition="{imageorient}== 26">
+			<div class="section is-parallax fullbleed-level2-hero right hero">
+		</f:if>
+		<f:if condition="{imageorient}==25">
+			<div class="section is-parallax fullbleed-level2-hero left hero">
+		</f:if>
+
+		<div class="full-background-container">
+			<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+				<div style="background-image: url({f:uri.image(src:background,treatIdAsReference:1, maxWidth: 768)});" class="full-background-image anchor-left background-fixed">
+					<div class="background-data">
+						<span data-size="small" data-src="{f:uri.image(src:background,treatIdAsReference:1, maxWidth: 768)}"></span>
+						<span data-size="medium" data-src="{f:uri.image(src:background.uid,treatIdAsReference:1, maxWidth: 1024)}"></span>
+						<span data-size="large" data-src="{f:uri.image(src:background.uid,treatIdAsReference:1, maxWidth: 1200)}"></span>
+						<span data-size="wide" data-src="{f:uri.image(src:background.uid,treatIdAsReference:1, maxWidth: 2560)}"></span>
+					</div>
+				</div>
+			</f:for>
+		</div>
+		<div class="container-fluid">
+			<f:if condition="{imageorient}== 26">
+				<div class="col-xs-12 col-sm-5 col-md-6 col-full-height ">
+					<div class="box-holder ">
+						<div class="icon-holder">
+							<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+								<img src="fileadmin{fileReference.originalFile.identifier}" alt="{fileReference.alternative}" style="max-width:100%">
+							</f:for>
+						</div>
+					</div>
+				</div>
+			</f:if>
+			<div class="col-xs-12 col-sm-7 col-md-6 col-full-height">
+				<div class="box-holder">
+					<div class="box {theme}">
+						<div class="box-title">
+							<h1>{header}</h1>
+						</div>
+
+						<div class="box-copy">
+							<f:format.html>{bodytext}</f:format.html>
+						</div>
+						<f:render partial="cta" arguments="{_all}"/>
+					</div>
+				</div>
+			</div>
+
+			<f:if condition="{imageorient}==25">
+				<div class="col-xs-12 col-sm-5 col-md-6 col-full-height right-col"></div>
+			</f:if>
+
+			<div class="scroll-button">
+				<span class="icon icon-arrow-down"></span>
+
+				<div class="visually-hidden">Scroll down</div>
+			</div>
+		</div>
+		</div>
+
+	</f:if>
+
+
+</f:then>
+<f:else>
+
+<f:if condition="{layout}==0">
+
+	<f:if condition="{imageorient}==6">
+
+	</f:if>
+	<f:if condition="{imageorient}== 25">
+		<f:render partial="textpic2526" arguments="{_all}"/>
+	</f:if>
+	<f:if condition="{imageorient}== 26">
+		<f:render partial="textpic2526" arguments="{_all}"/>
+	</f:if>
+</f:if>
+
+
+<f:if condition="{layout}==5">
+	<f:if condition="{theme}=='light'">
+		<f:then>
+			<div class="section is-parallax fullbleed-level2-hero right hero dark-image hero-small">
+				<div class="full-background-container">
+					<f:if condition="{background}">
+						<div style="background-image: url({f:uri.image(src:background, maxWidth: 768)});"
+							 class="full-background-image">
+							<div class="background-data">
+									<span data-size="small"
+										  data-src="{f:uri.image(src:background, maxWidth: 768)}"></span>
+								<span data-size="medium"
+									  data-src="{f:uri.image(src:background, maxWidth: 1024)}"></span>
+									<span data-size="large"
+										  data-src="{f:uri.image(src:background, maxWidth: 1200)}"></span>
+									<span data-size="wide"
+										  data-src="{f:uri.image(src:background, maxWidth: 2560)}"></span>
+							</div>
+						</div>
+					</f:if>
+				</div>
+				<div class="container-fluid">
+					<div class="col-xs-12 col-sm-6 col-md-7 col-full-height left-col"></div>
+					<div class="col-xs-12 col-sm-6 col-md-5 col-full-height">
+						<div class="box-holder">
+							<div class="box">
+								<div class="box-title">
+									<f:render partial="stdHeader" arguments="{_all}"/>
+								</div>
+								<div class="box-copy">
+									<f:format.html>{bodytext}</f:format.html>
+								</div>
+								<f:render partial="cta" arguments="{_all}"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="section promo-exclusive-offers">
+				<div class="full-background-container">
+					<f:if condition="{background}">
+						<div style="background-image: url({f:uri.image(src:background, maxWidth: 768)});"
+							 class="full-background-image">
+							<div class="background-data">
+									<span data-size="small"
+										  data-src="{f:uri.image(src:background, maxWidth: 768)}"></span>
+								<span data-size="medium"
+									  data-src="{f:uri.image(src:background, maxWidth: 1024)}"></span>
+									<span data-size="large"
+										  data-src="{f:uri.image(src:background, maxWidth: 1200)}"></span>
+									<span data-size="wide"
+										  data-src="{f:uri.image(src:background, maxWidth: 2560)}"></span>
+							</div>
+						</div>
+					</f:if>
+				</div>
+				<div class="container-fluid">
+					<div class="col-xs-12 col-sm-6 col-md-7 col-full-height left-col"></div>
+					<div class="col-xs-12 col-sm-6 col-md-5 col-full-height">
+						<div class="box-holder">
+							<div class="box">
+								<div class="box-title">
+									<f:render partial="stdHeader" arguments="{_all}"/>
+								</div>
+								<div class="box-copy">
+									<f:format.html>{bodytext}</f:format.html>
+								</div>
+								<f:render partial="cta" arguments="{_all}"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</f:else>
+	</f:if>
+
+</f:if>
+
+<f:if condition="{layout}==6">
+	<div class="section promo-prizes">
+		<div class="full-background-container">
+			<f:if condition="{background}">
+				<div style="background-image: url({f:uri.image(src:background, maxWidth: 768)});"
+					 class="full-background-image">
+					<div class="background-data">
+						<span data-size="small" data-src="{f:uri.image(src:background, maxWidth: 768)}"></span>
+								<span data-size="medium"
+									  data-src="{f:uri.image(src:background, maxWidth: 1024)}"></span>
+						<span data-size="large" data-src="{f:uri.image(src:background, maxWidth: 1200)}"></span>
+						<span data-size="wide" data-src="{f:uri.image(src:background, maxWidth: 2560)}"></span>
+					</div>
+				</div>
+			</f:if>
+		</div>
+		<div class="container-fluid">
+			<div class="col-xs-12 col-sm-6 col-md-5 col-full-height">
+				<div class="box-holder">
+					<div class="box">
+						<div class="box-picture-title">
+							<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+								<img src="fileadmin{fileReference.originalFile.identifier}" alt="promo">
+							</f:for>
+						</div>
+						<div class="box-copy">
+							<f:format.html>{bodytext}</f:format.html>
+						</div>
+						<f:render partial="cta" arguments="{_all}"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-7 col-full-height right-col"></div>
+		</div>
+	</div>
+</f:if>
+<f:if condition="{layout}==11">
+	<div class="container-fluid">
+		<div class="section image-text-2col">
+			<div class="row">
+				<div class="xs-hidden sm-hidden col-md-6 col-md-offset-1 align-centre">
+					<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+
+						<img src="fileadmin{fileReference.originalFile.identifier}" alt="">
+					</f:for>
+				</div>
+				<div class="col-xs-12 col-md-4">
+					<div class="section text-list-2col text-list-1col tick-icons">
+						<f:format.html>{bodytext}</f:format.html>
+						<f:render partial="cta" arguments="{_all}"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:if>
+<f:if condition="{layout}==13">
+	<div class="section {theme}">
+		<div class="container-fluid">
+			<div class="col-md-8 col-md-offset-2">
+				<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+					<img src="fileadmin{fileReference.originalFile.identifier}" style="max-height:50px" class="promoicon">
+				</f:for>
+				<h2 style="font-size: 3em;color: #4f2556;">
+					{header}
+				</h2>
+				<h3 style="color: #3b9092;">{subheader}</h3>
+				<f:format.html>{bodytext}</f:format.html>
+			</div>
+		</div>
+	</div>
+</f:if>
+<f:if condition="{layout}==14">
+	<div class="section dark"
+		 style="background: #534c63 url({f:uri.image(src:background)}) center center no-repeat;background-size: 100% auto;">
+		<div class="container-fluid"><br>
+			<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+				<img src="fileadmin{fileReference.originalFile.identifier}">
+			</f:for>
+
+			<h2 style="font-size: 3em;color: #3b9092;">
+				{header}</h2>
+			<span class=points id=skrill_challenge_points>0</span>
+
+			<p style="color: #3b9092;">{bodytext}</p>
+		</div>
+	</div>
+
+</f:if>
+<f:if condition="{layout}==15">
+	<div class="section"
+		 style="background: #534c63 url({f:uri.image(src:background)}) center center no-repeat;background-size: 100% auto;">
+
+
+		<div class="container-fluid">
+			<h2 style="font-size: 3em;color: #ededef;">
+				{header}</h2>
+
+			<div style="display:table">
+				<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+					<img src="fileadmin{fileReference.originalFile.identifier}"
+						 style="display: table-cell; vertical-align: middle; margin-left: 1em;">
+				</f:for>
+
+
+				<p style="color: #ededef; text-align: left; display: table-cell;vertical-align: middle;padding-left: 3em;">
+					{bodytext}</p>
+			</div>
+		</div>
+		<br><br></div>
+</f:if>
+
+
+<f:if condition="{layout}==16">
+	<div class="box partner">
+		<div class="logo">
+			<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+				<img src="fileadmin{fileReference.originalFile.identifier}" alt="Partner">
+			</f:for>
+		</div>
+		<h2>{header}</h2>
+		<f:format.html>{bodytext}</f:format.html>
+		<f:render partial="cta" arguments="{_all}"/>
+	</div>
+</f:if>
+
+
+
+
+</f:else>
+</f:if>

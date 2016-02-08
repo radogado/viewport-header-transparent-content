@@ -1,0 +1,18 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+<div class="icon">
+	<div class="icon-outline"></div>
+	<div class="icon-image">
+		<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+			<object data="fileadmin{fileReference.originalFile.identifier}" class="svg-icon-image {iconclass}"></object>
+		</f:for>
+	</div>
+</div>
+<div class="title">
+	<h3>{header}</h3>
+</div>
+
+<div class="copy">
+	<f:format.html>{bodytext}</f:format.html>
+</div>
+

@@ -1,0 +1,339 @@
+/* Overlay ============================================== */
+.promo_overlay_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  background: rgba(255,255,255,.7);
+}
+
+.promo_overlay {
+  position: relative;
+  width: 836px;
+/*   min-height: 500px; */
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -350px;
+  padding: 31px 17px 31px 17px;
+
+  background: #efefef;
+  border: 3px solid #8d216b;
+
+  -moz-box-shadow: 0 0 35px rgba(0,0,0,.85); /* Firefox */
+  -webkit-box-shadow: 0 0 35px rgba(0,0,0,.85); /* Safari, Chrome */
+  box-shadow: 0 0 35px rgba(0,0,0,.85); /* CSS3 */
+}
+
+  /* IE8 Fix */
+  html.ie8 .promo_overlay { min-height: 438px; }
+
+.promo_overlay .promo_overlay_toggle {
+  display: block;
+  position: absolute;
+  top: -23px;
+  right: -23px;
+  width: 45px;
+  height: 45px;
+
+  background: url('/fileadmin/templates/main/res/css/img/icons/shopping_overlay_toggle.png') no-repeat 0 0;
+
+  cursor: pointer;
+}
+
+.promo_overlay .promo_overlay_controls {
+  position: absolute;
+  top: 160px;
+  display: block;
+  width: 65px;
+  height: 130px;
+
+  background: url('/fileadmin/templates/main/res/css/img/icons/shopping_overlay_controls_sprite.png') no-repeat 0 0;
+}
+
+.promo_overlay .promo_overlay_controls.prev { left: -68px; }
+
+.promo_overlay .promo_overlay_controls.next {
+  right: -68px;
+
+  background-position: -65px 0;
+}
+
+.promo_overlay_image_container {
+  width: 396px;
+  height: 396px;
+  float: left;
+  margin: 0 20px 0 0;
+
+  background: #FFFFFF;
+  border: 1px solid #8d216b;
+}
+
+.promo_overlay_image_container ul li {
+  width: 394px;
+  height: 394px;
+  display: table-cell;
+  vertical-align: middle;
+
+  text-align: center;
+}
+
+  .promo_overlay_image_container ul li.flex-active-slide {
+    line-height: 550px;
+  }
+
+.promo_overlay_image_container ul li img {
+  display: inline;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.promo_overlay_image_container .flex-direction-nav .flex-next {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  top: 200px;
+  right: 393px;
+
+  background: url('/fileadmin/templates/main/res/css/img/icons/shopping_overlay_slider_flex_direction_sprite.png') no-repeat 0 0;
+  opacity: 1;
+}
+
+.promo_overlay_image_container .flex-direction-nav .flex-prev {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  top: 200px;
+  left: -7px;
+
+  background: url('/fileadmin/templates/main/res/css/img/icons/shopping_overlay_slider_flex_direction_sprite.png') no-repeat 0 -50px;
+  opacity: 1;
+}
+
+.promo_overlay_image_container .flex-control-nav {
+  bottom: 45px;
+  left: 17px;
+  right: 0;
+  width: 396px;
+}
+
+.promo_overlay_image_container .flex-control-paging li a {
+  background-image: url(img/icons/ind_noa_small_purple.png);
+  -webkit-transition: none;
+  moz-transition: none;
+  ms-transition: none;
+  o-transition: none;
+  transition: none;
+}
+
+.promo_overlay_image_container .flex-control-paging li a.flex-active { background-image: url('/fileadmin/templates/main/res/css/img/icons/ind_noa_small_active_purple.png'); }
+
+.promo_overlay_offer_container {
+  position: relative;
+  width: 380px;
+  min-height: 396px;
+  float: left;
+
+  border-bottom: 1px dashed #8d216b;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_headline {
+  border-top: 1px dashed #8d216b;
+  border-bottom: 1px dashed #8d216b;
+  padding: 15px 0;
+  margin: 0 0 15px 0;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_headline.mastercard {
+  border-top: 1px dashed #02b8bd;
+  border-bottom: 1px dashed #02b8bd;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_headline a { text-decoration: none; }
+
+.promo_overlay_offer_container .promo_overlay_offer_headline span {
+  display: block;
+  margin: 0 0 15px 0;
+
+  color: #8d216b;
+  font-family: 'open_sansbold';
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_headline.mastercard span, .promo_overlay_offer_container .promo_overlay_offer_headline.mastercard h3 {
+  color: #02b8bd !important;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_text {
+  display: block;
+  margin: 0 0 15px 0;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_text span { font-size: 0.875em; }
+
+.promo_overlay_offer_container .promo_overlay_offer_mastercard {
+  position: relative;
+  margin: 15px 0 0 0;
+  bottom: 9px;
+  width: 380px;
+  height: 153px;
+  padding: 18px 10px 10px 10px;
+
+  background: #02b8bd;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_mastercard p {
+  margin: 0 0 10px 0;
+  padding: 0 0 20px 90px;
+
+  font-size: .75em;
+  line-height: 16px;
+
+  border-bottom: 1px dashed #FFFFFF;
+  background: url('/fileadmin/templates/main/res/css/img/icons/mastercard.png') no-repeat 0 0;
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_mastercard p span {
+  display: block;
+  margin: 5px 0 0 0;
+  
+  font-size: 16px;
+  font-family: 'open_sansbold';
+}
+
+.promo_overlay_offer_container .promo_overlay_offer_mastercard p span a { text-decoration: none; }
+
+.promo_overlay_offer_container .button {
+  display: block;
+  height: 38px;
+
+  text-align: center;
+  font-size: 1em;
+  line-height: 38px;
+  color: #FFFFFF;
+  text-decoration: none;
+
+  -moz-box-shadow: inset 0 1px 1px #c390b2; /* Firefox */
+  -webkit-box-shadow: inset 0 1px 1px #c390b2; /* Safari, Chrome */
+  box-shadow: inset 0 1px 1px #c390b2; /* CSS3 */
+
+  background: #5b1c40;
+  background: -moz-linear-gradient(top, #862165 0%, #5b1c40 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#862165), color-stop(100%,#5b1c40)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #862165 0%, #5b1c40 100%);
+  background: -o-linear-gradient(top, #862165 0%, #5b1c40 100%);
+  background: -ms-linear-gradient(top, #862165 0%, #5b1c40 100%);
+  background: linear-gradient(top, #862165 0%, #5b1c40 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#862165', endColorstr='#5b1c40');
+
+  border-collapse: separate;
+  border: 1px solid #342142;
+
+  -moz-border-radius: 2px; /* Firefox */
+  -webkit-border-radius: 2px; /* Safari, Chrome */
+  border-radius: 2px; /* CSS3 */
+}
+
+.promo_overlay_offer_container .button.highlight {
+  color: #FFFFFF;
+
+  background: #5b1c40;
+  background: -moz-linear-gradient(top, #BEA666 0%, #8f7d4c 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#BEA666), color-stop(100%,#8f7d4c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #BEA666 0%, #8f7d4c 100%);
+  background: -o-linear-gradient(top, #BEA666 0%, #8f7d4c 100%);
+  background: -ms-linear-gradient(top, #BEA666 0%, #8f7d4c 100%);
+  background: linear-gradient(top, #BEA666 0%, #8f7d4c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#BEA666', endColorstr='#8f7d4c');
+
+  border: 1px solid #BEA666;
+}
+
+.promo_overlay_offer_container.no_mc .button{
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+}
+
+.promo_overlay_footer {
+  clear: both;
+  padding: 10px 0 0 415px;
+}
+
+.promo_overlay_footer .promo_overlay_footer_social span {
+  display: inline-block;
+  min-width: 145px;
+  max-width: 145px;
+  vertical-align: top;
+
+  line-height: 30px;
+  font-size: .75em;
+}
+
+.promo_overlay_footer .promo_overlay_footer_social ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.promo_overlay_footer .promo_overlay_footer_social ul li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 20px;
+}
+
+.promo_overlay_footer .promo_overlay_footer_social ul li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url('/fileadmin/templates/main/res/css/img/icons/social_share_icons_sprite.png') no-repeat 0 0;
+}
+
+.promo_overlay_footer .promo_overlay_footer_social ul li a.twitter { background-position: 0 -30px; }
+
+.promo_overlay_footer .promo_overlay_footer_social ul li a.google { background-position: 0 -60px; }
+
+.promo_overlay_footer .promo_overlay_footer_social ul li a.email { background-position: 0 -90px; }
+
+@media only screen and (max-width: 751px) {
+  /* just a dummy to check display via jQuery */
+  #display_test {
+    display: none;
+  }
+}
+
+/* Narrow layout fixes */
+
+.promo_overlay {
+  
+  width: auto;
+  max-width: 800px;
+  top: 2em;
+  margin-top: 0;
+  
+}
+
+.promo_overlay_wrapper {
+
+  padding: 0 2em;
+  overflow: scroll;
+
+}
+
+.shopping_overlay_image_container {
+  
+  overflow: hidden;
+  min-height: 0 !important;
+  
+}
+
+@media screen and (max-width: 640px) {
+
+	div[id|="affiliateitem"] {
+		
+		margin-bottom: 2em;		
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+<f:comment>
+	<f:render partial="stdHeader" arguments="{_all}"/>
+	<h1>{header}</h1>
+
+	<p>Layout: {layout}</p>
+
+	<p>Bodytext:</p>
+
+	<div style="border:1px solid #000;">
+		<f:format.html>{bodytext}</f:format.html>
+	</div>
+</f:comment>
+
+<f:if condition="{layout}==9">
+	<f:then>
+		<div class="section awards">
+			<div class="container-fluid">
+				<div class="module-container">
+					<div class="module-title">
+						<h2>{header}</h2>
+					</div>
+					<ul>
+						<f:for each="{m:Fal(uid:uid,l18n_parent:l18n_parent)}" as="fileReference">
+							<li>
+								<div class="award-image-holder">
+									<f:comment>
+									<img src="fileadmin{fileReference.originalFile.identifier}"
+										 alt="{fileReference.alternative}">
+									</f:comment>
+
+									<div style="background-image:url('/fileadmin/{fileReference.originalFile.identifier}')"
+										 class="award-image"></div>
+								</div>
+								<div class="award-year">{fileReference.title}</div>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="{box}">
+			<f:render partial="image" arguments="{_all}"/>
+		</div>
+	</f:else>
+</f:if>
+
+
+
+

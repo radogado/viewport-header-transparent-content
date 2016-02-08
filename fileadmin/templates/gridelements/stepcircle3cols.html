@@ -1,0 +1,20 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+<div class="section is-parallax animated-stepcircles {data.flexform_class}">
+	<div class="container-fluid">
+		<div class="module-container">
+			<h2 class="module-title">
+				<f:format.nl2br>{data.tx_gridelements_view_raw_columns.10.0.header}</f:format.nl2br>
+			</h2>
+			<f:format.html>{data.tx_gridelements_view_raw_columns.10.0.bodytext}</f:format.html>
+			<ol class="module-stepcircles col-count-3">
+				<li class="{data.flexform_class1}"><f:format.raw>{data.tx_gridelements_view_column_21}</f:format.raw></li>
+				<li class="{data.flexform_class2}"><f:format.raw>{data.tx_gridelements_view_column_22}</f:format.raw></li>
+				<li class="{data.flexform_class3}"><f:format.raw>{data.tx_gridelements_view_column_23}</f:format.raw></li>
+			</ol>
+			<f:format.raw>{data.tx_gridelements_view_column_19}</f:format.raw>
+			<f:if condition="{data.flexform_appstore}">
+				<f:render partial="appstore" arguments="{_all}"/>
+			</f:if>
+		</div>
+	</div>
+</div>

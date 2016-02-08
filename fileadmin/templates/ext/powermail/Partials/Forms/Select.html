@@ -1,0 +1,10 @@
+{namespace vh=Tx_Powermail_ViewHelpers}
+
+<div id="powermail_fieldwrap_{field.uid}" class="powermail_fieldwrap powermail_fieldwrap_select powermail_fieldwrap_{field.uid} {field.css} <f:if condition="{field.mandatory}"> mandatory</f:if>">
+	<label for="powermail_field_{field.marker}" class="powermail_label">
+		<span><vh:string.RawAndRemoveXss>{field.title}</vh:string.RawAndRemoveXss></span>
+		<span class="selector">
+			<vh:Form.SelectField options="{field.settings}" name="field[{field.uid}]" class="powermail_field powermail_select {vh:Misc.ValidationClass(field: '{field}')} {vh:Misc.ErrorClass(field: '{field}', class: 'powermail_field_error')}" id="powermail_field_{field.marker}" value="{vh:Misc.PrefillField(field: '{field}')}" />
+		</span>
+	</label>
+</div>

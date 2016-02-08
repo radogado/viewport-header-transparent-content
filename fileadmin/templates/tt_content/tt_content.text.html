@@ -1,0 +1,78 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+<f:comment>
+	<f:render partial="stdHeader" arguments="{_all}"/>
+	<h1>{header}</h1>
+
+	<p>Layout: {layout}</p>
+
+	<p>Bodytext:</p>
+
+	<div style="border:1px solid #000;">
+		<f:format.html>{bodytext}</f:format.html>
+	</div>
+</f:comment>
+<f:comment>
+	<div class="{m:ContentClass(layout:layout)} ">
+</f:comment>
+
+<f:if condition="{layout}==0">
+	<f:render partial="stdHeader" arguments="{_all}"/>
+	<f:format.html>{bodytext}</f:format.html>
+	<f:render partial="cta" arguments="{_all}"/>
+</f:if>
+
+<f:if condition="{layout}==3">
+	<div class="section outline-text-cta {theme}">
+		<div class="container-fluid">
+			<div class="module-container">
+				<div class="module-title"><h2>{header}</h2></div>
+
+				<div class="module-copy">
+					<f:format.html>{bodytext}</f:format.html>
+				</div>
+				<f:render partial="cta" arguments="{_all}"/>
+			</div>
+		</div>
+	</div>
+</f:if>
+
+
+
+<f:if condition="{layout}==10">
+	<div class="section text-list-2col tick-icons {theme}">
+		<div class="container-fluid">
+			<div class="module-container">
+				<div class="module-subtitle">
+					<h2>{subheader}</h2>
+				</div>
+				<div class="module-title">
+					<h3>{header}</h3>
+				</div>
+				<f:format.html>{bodytext}</f:format.html>
+				<f:render partial="cta" arguments="{_all}"/>
+			</div>
+		</div>
+	</div>
+</f:if>
+
+<f:if condition="{layout}==12">
+	<div class="section {theme}">
+		<div class="container-fluid ">
+			<div class="legals-notice">
+				<f:format.html>{bodytext}</f:format.html>
+			</div>
+		</div>
+	</div>
+</f:if>
+
+<f:if condition="{layout}==17">
+	<div class="steps">
+		<h3>{header}</h3>
+		<f:format.html>{bodytext}</f:format.html>
+	</div>
+</f:if>
+
+
+
+

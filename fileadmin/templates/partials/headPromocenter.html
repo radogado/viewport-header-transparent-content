@@ -1,0 +1,65 @@
+<header id="header" role="banner">
+	<div class="header-background">
+		<h2>Showcase</h2>
+	</div>
+	<div class="header-wrapper">
+		<f:link.page pageUid="1" class="site-title">Skrill</f:link.page>
+		<button name="Menu toggle" class="menu-toggle">
+			<span class="icon icon-close"></span>
+			<span class="icon icon-menu"></span>
+		</button>
+		<f:comment><f:cObject typoscriptObjectPath="lib.merchanttop"/></f:comment>
+		<ul class="account-links xs-hidden sm-hidden">
+			<li><f:cObject typoscriptObjectPath="lib.offers"/></li>
+			<li><f:cObject typoscriptObjectPath="lib.offersPromo2"/></li>
+
+			<f:comment>
+				<li>
+					<div class="login-text">
+						<f:cObject typoscriptObjectPath="lib.login"/>
+					</div>
+					<div class="myaccount-text">
+						<a href="https://account.skrill.com/login?locale=<f:cObject typoscriptObjectPath='lib.signuplocale'/>" target="_blank">
+							<f:cObject typoscriptObjectPath="lib.myaccount"/>
+						</a>
+					</div>
+				</li>
+			</f:comment>
+		</ul>
+	</div>
+	<div class="blur-header"></div>
+	<div id="header-overlay"></div>
+</header>
+<nav id="nav" role="navigation" class="col-xs-10 col-md-5 col-lg-3">
+	<ul class="site-links">
+		<f:cObject typoscriptObjectPath="lib.mainMenu"/>
+		<li><f:cObject typoscriptObjectPath="lib.help"/></li>
+		<li class="merchant-link"><f:cObject typoscriptObjectPath="lib.merchant"/></li>
+	</ul>
+	<span class="hover-bg"></span>
+	<ul class="account-actions">
+		<li>
+			<a href="https://account.skrill.com/login?locale=<f:cObject typoscriptObjectPath='lib.signuplocale'/>" class="button button-light-purple">
+				<span class="panel"></span>
+				<span class="copy">
+					<f:cObject typoscriptObjectPath="lib.myaccount"/>
+				</span>
+				<span class="icon icon-arrow-right"></span>
+			</a>
+		</li>
+	</ul>
+	<ul class="social-links">
+		<li><a href="https://twitter.com/skrill" class="icon icon-twitter"><span class="copy">Twitter</span></a></li>
+		<li><a href="https://www.facebook.com/Skrillpayments" class="icon icon-facebook"><span class="copy">Facebook</span></a></li>
+		<li><a href="https://www.linkedin.com/company/skrill" class="icon icon-linkedin"><span class="copy">LinkedIn</span></a></li>
+	</ul>
+	<ul class="language-links">
+		<li><f:cObject typoscriptObjectPath="lib.currentLanguage"/></li>
+		<li><a href="#" class="change-language">Change language</a></li>
+	</ul>
+	<div class="subnav language-selection"><a href="#" class="back"><span class="icon icon-arrow-left-thin"></span>Back</a>
+		<f:cObject typoscriptObjectPath="lib.langmenu"/>
+		<span class="hover-bg lang-hover"></span>
+	</div>
+
+</nav>

@@ -1,0 +1,45 @@
+<div class="section is-parallax fullbleed-level2-hero solid-box left hero hero-small">
+	<div class="full-background-container">
+		<div style="background-image: url({background});"
+			 class="full-background-image anchor-right with-offset background-fixed">
+			<div class="background-data">
+				<span data-size="small" data-src="{background}"></span>
+				<span data-size="medium" data-src="{background}"></span>
+				<span data-size="large" data-src="{background}"></span>
+				<span data-size="wide" data-src="{background}"></span>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="col-xs-12 col-sm-7 col-md-6 col-full-height">
+			<div class="box-holder">
+				<div class="box">
+					<div data-arrow-controls="false" data-pagination="true" class="carousel">
+						<ul>
+							<f:for each="{data.tx_gridelements_view_children}" as="content" iteration="count">
+								<f:if condition="{content.header}">
+									<li data-panel="{count.cycle}">
+										<div class="box-title">
+											<h2>{content.header}</h2>
+										</div>
+										<f:if condition="{content.bodytext}">
+											<f:format.html>{content.bodytext}</f:format.html>
+										</f:if>
+										<f:if condition="{content.tx_skrillbackend_ctalink}">
+											<f:link.page pageUid="{content.tx_skrillbackend_ctalink}" class="button lv1">
+												<span class="panel"></span>
+												<span class="copy">{content.tx_skrillbackend_ctalinklabel}</span>
+												<span class="icon icon-arrow-right-circle"></span>
+											</f:link.page>
+										</f:if>
+									</li>
+								</f:if>
+							</f:for>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-5 col-md-6 col-full-height right-col"></div>
+	</div>
+</div>

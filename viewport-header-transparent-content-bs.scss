@@ -197,6 +197,13 @@ a[href] {
 
 }
 
+.section:before, .section:after { // Clear inner margins
+	
+	content: '';
+	display: table;
+
+}
+
 #content h3 {
 	
 	font-size: 2.5em;
@@ -249,5 +256,73 @@ footer {
 	padding-bottom: 7%; //  Aspect ratio
 	display: inline-block; 
 	width: 0;
+	
+}
+
+.outline-text-cta h2 {
+	
+	text-transform: uppercase;
+	font-weight: 100;	
+	
+}
+
+.outline-text-cta p {
+	
+	color: purple;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.3em;
+	
+}
+
+.outline-text-cta p a[href] {
+	
+	font-size: 1.3em;
+	text-decoration: underline;
+	
+}
+
+.badges {
+	
+	padding: 1em 33%;
+	
+	a {
+		
+		margin: 0 1em;
+		display: inline-block;
+		width: 40%;
+
+	}
+	
+}
+
+.text-list-2col {
+	
+	ol {
+		
+		column-count: 2;
+		list-style: none;
+		text-align: start;
+		counter-reset: level1;
+
+	}
+	
+	li {
+		
+		display: block;
+		margin: .5em 0;
+		
+	}
+	
+	li:before {
+		
+	    content: counter(level1) '.';
+	    counter-increment: level1;
+	    background: cyan;
+	    display: inline-block;
+	    padding: 0 1em;
+	    margin: 0 1em;
+
+	}
 	
 }

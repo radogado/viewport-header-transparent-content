@@ -1,0 +1,48 @@
+<f:layout name="main_layout"/>
+<f:section name="wrapper">
+
+	<f:render partial="gtm"/>
+	<f:render partial="cookie" arguments="{_all}"/>
+	<f:render partial="ie8"/>
+
+	<f:render partial="headPromocenter"/>
+
+	<div id="content" role="main" style="padding-top: 5em;">
+		<nav class="sub-nav level1
+		<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.PromocenterSubMenu')}==''">
+		single-nav
+		</f:if>
+		">
+			<ul>
+				<f:cObject typoscriptObjectPath="lib.PromocenterMainMenu"/>
+			</ul>
+		</nav>
+
+		<nav class="sub-nav level2">
+			<ul>
+				<f:cObject typoscriptObjectPath="lib.PromocenterSubMenu"/>
+			</ul>
+		</nav>
+
+
+		<f:format.raw>{content_hero}</f:format.raw>
+
+
+		<div class="csc-default">
+			<div class="section">
+				<div class="container-fluid">
+					<div class="col-xs-12 col-md-8">
+						<f:format.raw>{content_main}</f:format.raw>
+					</div>
+					<div class="col-xs-12 col-md-4 banners">
+						<div class="calendar-right"></div>
+						<f:format.raw>{content_banner}</f:format.raw>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<f:render partial="footer"/>
+	</div>
+	<div id="page-overlay"></div>
+</f:section>

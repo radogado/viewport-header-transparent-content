@@ -1,0 +1,65 @@
+{namespace m=TYPO3\skrillbackend\ViewHelpers}
+
+<div class="section punchout-image with-copy styled-list left white">
+	<div class="full-background-container">
+		<div style="background-image: url(/fileadmin/content/punchout/punchout-image-blur.jpg);"
+			 class="full-background-image anchor-right with-offset background-fixed">
+			<div class="background-data"><span data-size="small"
+											   data-src="/fileadmin/content/punchout/punchout-image-blur.jpg"></span><span
+					data-size="medium" data-src="/fileadmin/content/punchout/punchout-image-blur.jpg"></span><span
+					data-size="large" data-src="/fileadmin/content/punchout/punchout-image-blur.jpg"></span><span
+					data-size="wide" data-src="/fileadmin/content/punchout/punchout-image-blur.jpg"></span></div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row no-gutter top-spacer"></div>
+		<div class="row no-gutter content-row">
+			<div class="col-xs-12 col-md-6 col-full-height left-col">
+
+				<f:for each="{data.tx_gridelements_view_children}" as="content">
+					<f:if condition="{content.tx_gridelements_columns}==1">
+						<div class="module-title">
+							<h2>{content.header}</h2>
+						</div>
+						<div class="module-copy">
+							<f:format.html>{content.bodytext}</f:format.html>
+						</div>
+						<div class="punchout-icon">
+							<div class="icon-holder">
+
+								<f:for each="{m:Fal(uid:content.uid,l18n_parent:content.l18n_parent, field:'tx_skrillbackend_svg')}"
+									   as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass_svg}"></object>
+								</f:for>
+
+							</div>
+						</div>
+						<div class="overlay-icon">
+							<div class="icon-holder">
+
+								<f:for each="{m:Fal(uid:content.uid,l18n_parent:content.l18n_parent, field:'tx_skrillbackend_overlay')}"
+									   as="fileReference">
+									<object data="fileadmin{fileReference.originalFile.identifier}"
+											class="svg-icon-image {content.tx_skrillbackend_iconclass_overlay}"></object>
+								</f:for>
+							</div>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+			<div class="col-xs-12 col-md-6 col-full-height right-col">
+				<div class="column-content">
+					<f:for each="{data.tx_gridelements_view_children}" as="content">
+						<f:if condition="{content.tx_gridelements_columns}==2">
+							<h3>{content.header}</h3>
+							<f:format.html>{content.bodytext}</f:format.html>
+						</f:if>
+					</f:for>
+
+				</div>
+			</div>
+		</div>
+		<div class="row no-gutter top-spacer"></div>
+	</div>
+</div>

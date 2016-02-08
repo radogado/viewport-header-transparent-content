@@ -1,0 +1,730 @@
+/* Promo Centre 2016 for the BIO Skrill site */
+
+div#content {
+	
+// 	border-top: 1em solid transparent;
+	padding-top: 0 !important;
+
+}
+
+.cookie-notice {
+	
+	position: static;
+
+}
+
+
+#header, .header-wrapper > nav, nav.sub-nav.level1 {
+	
+	position: relative;
+	margin-top: 0 !important;
+
+}
+
+#header .header-background {
+	
+	background: rgba(0, 0, 0, .8);
+	
+}
+
+#header .header-wrapper .merchant-link, #header .header-wrapper .account-links li + li {
+	
+	display: none;
+	
+}
+
+#header .header-wrapper .account-links li:first-child a {
+	
+	border: none;
+	padding-right: none;
+
+}
+
+.sub-nav {
+	
+	display: block;
+	text-align: center;
+	overflow: hidden;
+
+}
+
+.sub-nav, h2, h3 {
+	
+	font-family: bebas_neueregular, Helvetica, Arial, sans-serif;
+	font-size: 1.7em;
+
+}
+
+h2 {
+	
+	font-size: 2em;
+	color: #7f2371;
+	line-height: 1;
+
+}
+
+h2 a {
+	
+	color: inherit;
+
+}
+
+h3 { 
+	
+	font-size: 2em; 
+
+}
+
+.sub-nav ul {
+	
+	max-width: 45em;
+
+}
+
+.sub-nav li, .sub-nav ul {
+	
+	display: inline-block;
+	vertical-align: top;
+	padding: 0;
+	position: relative;
+	margin: 0;
+	
+}
+
+.sub-nav a {
+	
+	padding: .5em;
+	display: inline-block;
+	color: #8f91a4;
+	text-transform: uppercase;
+	
+}
+
+.sub-nav .active a {
+	
+	color: #7f2371;
+	
+}
+
+.sub-nav.level1 ul:before { // Hide the first-line arrow on two-lines level1 nav
+	
+	content: '';
+	display: block;
+	background: #fff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 2em;
+	z-index: 0;
+	position: absolute;
+
+}
+
+.sub-nav.level1 li.active:before, .sub-nav.level1 li.active:after { // Display active arrows per each line
+	
+	content: '';
+	display: block;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+
+	width: 0; 
+	height: 0; 
+	border-left: .7em solid transparent;
+	border-right: .7em solid transparent;
+	border-bottom: .7em solid #f4f4f4;
+	z-index: -1;
+	
+}
+
+.sub-nav.level1.single-nav li.active:before, .sub-nav.level1.single-nav li.active:after {
+	
+	display: none;
+
+}
+
+.sub-nav.level1 li.active:after {
+	
+	bottom: -100%;
+
+}
+
+.sub-nav.level2 {
+	
+	background: #f4f4f4;
+	margin-top: 0 !important; // Cookies notice
+
+}
+
+.sub-nav.single-nav.level1 + .sub-nav.level2 {
+	
+	display: none;
+
+}
+
+#header .header-wrapper .menu-toggle {
+	
+	margin-left: 0;
+
+}
+
+#header .header-wrapper .account-links {
+	
+	background: #333;
+	padding: 0 1em;
+	box-shadow: -1px 0 2px #333;
+	
+}
+
+
+#header .header-wrapper .account-links li+li {
+	
+	display: inline-block;
+	margin-left: 0;
+
+}
+
+time {
+	
+	font-style: italic;
+	text-transform: uppercase;
+	color: #777;
+	
+}
+
+.box {
+	
+	padding: 1em;
+	background: #f4f4f4;
+	margin-bottom: 1.5em;
+}
+
+.banners {
+	
+// 	margin-top: 1.18rem;
+
+}
+
+.schedules .banners {
+	
+	margin-top: 6rem;
+
+}
+
+.banners .box {
+	
+	background: #ebebeb;
+	padding: 0;
+
+}
+
+.section .csc-default > br {
+	
+	display: none;
+
+}
+
+.section .container-fluid {
+	
+	margin-top: 1.5rem;
+
+}
+
+.box.row {
+	
+	margin: 0;
+	
+}
+
+.box a.wide {
+	
+	display: block;
+
+}
+
+.box div + div a.wide {
+	
+	margin-top: 1em;
+
+}
+
+img {
+	
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: auto;
+	
+}
+
+img + img {
+	
+	margin-top: 1em;
+	
+}
+
+.section .news .row.auto.spacing {
+	
+	margin-top: -1rem;
+	
+}
+
+.news-list-view img {
+	
+	height: 100%;
+
+}
+
+.news-list-view .row.auto img {
+	
+	height: auto;
+
+}
+
+.news-list-view .row.auto > * {
+	
+	background: #f4f4f4;
+
+}
+
+p {
+	
+	color: #4a5160;
+
+}
+
+.box p:last-child {
+	
+	margin-bottom: 0;
+	
+}
+
+.banners .box {
+	
+	margin-bottom: 1em;
+
+}
+
+footer {
+	
+	margin-top: 1em;
+	
+}
+
+.button {
+	
+	margin: 1em 0;
+	max-width: 97%;
+
+}
+
+.calendar {
+	
+	max-width: 100%;
+	overflow: hidden;
+
+}
+
+.calendar table {
+	
+	margin-bottom: 1em;
+	display: table;
+	
+}
+
+table {
+	
+	table-layout: fixed;
+	
+}
+
+.calendar table td, .calendar table th {
+	
+	padding: 1em 0;
+	text-align: center;
+	text-transform: uppercase;
+	background: #f4f4f4;
+	display: table-cell;
+
+}
+
+.calendar table tr {
+	
+	display: table-row;
+
+}
+
+.calendar table tbody {
+	
+	display: table-row-group;
+
+}
+
+.calendar table .active td {
+	
+	background: #9fa2aa;
+
+}
+
+.calendar table .active a {
+	
+	color: #fff;
+
+}
+
+.calendar table th {
+	
+	background: #449ca8;
+	color: #fff;
+	font-family: bebas_neueregular, Helvetica, Arial, sans-serif;
+	font-size: 1.7em;
+	padding: .5em 0;
+
+}
+
+.calendar a {
+
+	color: #449ca8;
+	font-size: 1.4em;
+
+}
+
+.calendar .calendar-row {
+	
+	color: #4f2455;
+	
+}
+
+.calendar .prev, .calendar .next {
+	
+	font-size: 0;	
+	
+}
+
+.calendar .prev a:before, .calendar .next a:before {
+	
+	color: #fff;
+	content: '<';
+	font-size: 2rem;
+	
+}
+
+.calendar .next a:before {
+	
+	content: '>';
+	
+}
+
+/* Carousel */
+
+.carousel-wrap {
+	
+	background: no-repeat center center; 
+	background-size: cover;
+
+}
+
+.carousel {
+	
+	padding: 5em 1em;
+	margin: 0 3%;
+	color: #c5c5c5;
+
+}
+
+.carousel p {
+	
+	color: #c5c5c5;
+	text-transform: uppercase;
+
+}
+
+.carousel h2 {
+	
+	color: #fff;
+
+}
+
+.carousel h2 b {
+	
+	color: #449ca8;
+
+}
+
+h2 b {
+	
+	font-family: inherit;
+
+}
+
+.carousel h2, .carousel p {
+	
+	margin: 0;
+
+}
+
+.carousel .pagination {
+	
+	display: none;
+	
+}
+
+.carousel img {
+	
+	display: block;
+	margin: 0 auto;
+
+}
+
+.box.partner {
+	
+	text-align: center;
+	margin-top: 5em;
+	
+}
+
+.box.partner .logo {
+	
+	margin: -5rem 0 0 0;
+	display: inline-block;
+	
+}
+
+.steps {
+	
+	text-align: center;
+	
+}
+
+.steps ol {
+	
+    counter-reset: level1;
+
+}
+
+.steps li {
+	
+    counter-increment: level1;
+    padding: 0;
+    text-align: center;
+	
+}
+
+.steps li:before {
+
+	display: none;	
+	
+}
+
+.steps li b, .steps li strong {
+
+	display: inline-block;
+	font-family: bebas_neueregular, Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	border: 2px solid #449ca8;
+	border-radius: 50%;
+	color: #7f2371;
+	margin: 1em 2em;
+	padding: 1em;
+	
+}
+
+.steps li b:after, .steps li strong:after {
+	
+    content: counter(level1);
+    margin-left: .5em;
+	
+}
+
+.steps li b:before, .steps li strong:before, .partners-list .logo:before, .partner .logo:before, .carousel .logo:before, .promo .logo:before {
+	
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    display: inline-block;
+	vertical-align: middle;
+	
+}
+
+.partners-list {
+	
+	text-align: center;
+	margin: 1em 0;
+	
+}
+
+.row.partners-list > .col-xs-6 {
+	
+	min-height: 333px;
+
+}
+
+.partners-list h2 {
+	
+	color: #485161;
+	
+}
+
+.partners-list .logo, .partner .logo, .carousel .logo, .promo .logo {
+	
+	position: relative;
+	text-align: center;
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: 0px;
+	margin: 1em 23%;
+	white-space: nowrap;
+	display: block;
+	max-width: 200px;
+
+}
+
+.carousel .logo, .promo .logo {
+	
+	margin: 0;
+
+}
+
+.partners-list .logo.black, .partner .logo.black, .carousel .logo.black, .promo .logo.black {
+	
+	background: #000;
+
+}
+
+.partners-list .logo img, .partner .logo img, .carousel .logo img, .promo .logo img {
+	
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+.partners-list .logo:after, .partner .logo:after, .carousel .logo:after, .promo .logo:after {
+	
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	border: 2px solid #8f91a4;
+	border-radius: 50%;
+	box-shadow: 0 0 0 7em #fff;
+	
+}
+
+.partners-list .button {
+	
+	margin-top: 0;
+
+}
+
+.promo h2 {
+	
+	color: #485161;
+	margin: 0;
+
+}
+
+.promo h2 b {
+	
+	color: #7f2371;
+
+}
+
+.promo p {
+	
+	margin: 0;
+
+}
+
+.promo .button {
+	
+	margin-bottom: 0;
+
+}
+
+@media screen and (max-width: 47.99em) {
+	
+	img {
+		
+		width: 100%;
+
+	}
+	
+	.carousel img, .logo img, .promo img {
+		
+		width: auto;
+
+	}
+	
+	.calendar {
+		
+		margin: 1em 0;
+
+	}
+	
+	
+	/* Display calendar on top */
+	.schedules .container-fluid {
+		
+		display: flex;
+		flex-flow: column nowrap;
+		
+	}
+
+	.schedules .container-fluid > div {
+		
+		order: 2;
+
+	}
+	
+	.schedules .container-fluid > div.banners {
+		
+		order: 1;
+
+	}
+	
+	.schedules .calendar-right + * {
+		
+		display: none;
+
+	}
+	
+}
+
+.header-background h2 {
+	
+	color: #fff; 
+	text-align: center; 
+	line-height: .3;
+	font-size: 3em;
+	
+}
+
+
+#header.is-fixed .header-background h2 {
+
+	color: #333;
+
+}
+
+@media screen and (max-width: 1200px) {
+	
+	.header-background h2 {
+		
+		line-height: 0;
+		font-size: 2.7em;
+		
+	}
+	
+	div#content {
+		
+		border-top: none;
+		padding-top: 4.4em;
+
+	}
+
+}
+
