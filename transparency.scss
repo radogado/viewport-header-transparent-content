@@ -14,13 +14,24 @@
 
 }
 
+.section {
+	
+    background: #fff;
+
+}
+
+.section.transparent {
+	
+    background: transparent;
+
+}
+
 .section.contain {
 	
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	box-shadow: 50vw 0 0 #fff, -50vw 0 0 #fff;
-    background: #fff;
 
 }
 

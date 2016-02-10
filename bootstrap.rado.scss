@@ -76,7 +76,22 @@ body {
 		text-align: start;
 		padding: .5em;
 		margin: .5em 0;
+	    overflow: hidden;
 	
+	}
+	
+	.row > .col-md-12 {
+		
+		width: 100%;
+		flex: 0 1 100%;
+
+	}
+
+	.row > .col-md-6 {
+		
+		width: 50%;
+		flex: 0 1 50%;
+
 	}
 
 /* Masonry in CSS only */
