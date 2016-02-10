@@ -43,34 +43,10 @@
 }
 */
 
-.transparency main .row.transparent {
-	
-	background: transparent;
-	font-size: 0;
-	overflow: hidden;
-	transform: scale3d(1, 1, 1); // Fix Safari's 1px gap between element and border
-    display: table;
-    table-layout: fixed;
-	border-collapse: separate;
-	margin: -5px auto  0 auto; // Fix a crack on narrow screens
-
-}
-
-.transparency main .row.transparent:before, .transparency main .row.transparent:after {
-	
-	display: none;
-
-}
-
 .transparency main .row.transparent > * {
 	
 	margin: 0;
 	padding: 0;
-	display: table-cell;
-    float: none;
-    width: 33.3%;
-    position: relative;
-    vertical-align: top;
 
 }
 
