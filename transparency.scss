@@ -19,15 +19,18 @@
 	-webkit-backface-visibility: hidden;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	box-shadow: 50vw 0 0 #fff, -50vw 0 0 #fff, 0 50vh 0 #fff;
+	box-shadow: 50vw 0 0 #fff, -50vw 0 0 #fff;
+    background: #fff;
 
 }
 
+/*
 .section.contain:not(.transparent) {
 	
 	background-color: #fff;
 
 }
+*/
 
 .transparency main .row.transparent {
 	
@@ -166,8 +169,10 @@ main .row.transparent > * > .circle {
 	
 }
 
+/*
 main .section:not(.transparent) {
 	
 	background: #fff;
 	
 }
+*/

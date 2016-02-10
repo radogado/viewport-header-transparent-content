@@ -40,7 +40,6 @@ body {
 .row {
 	
 	width: 100%;
-	font-size: 0; /* No space between inline-block elements */
 	display: block;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -143,7 +142,7 @@ body {
 
 /* Bootstrap Carousel additions */
 
-.carousel-inner>.item>img {
+.carousel-inner > .item > img {
 	
 	margin: 0 auto;
 	
