@@ -43,10 +43,17 @@
 }
 */
 
-.transparency main .row.transparent > * {
+.transparency main .row.transparent * {
 	
 	margin: 0;
 	padding: 0;
+	background: #fff;
+
+}
+
+.transparency main .row.transparent .hole, .transparency main .row.transparent .hole object {
+	
+	background: transparent;
 
 }
 
@@ -105,6 +112,7 @@
 	position: relative;
 
 }
+
 
 main .row.transparent > * > .circle {
 
