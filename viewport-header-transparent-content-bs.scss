@@ -339,3 +339,27 @@ footer {
 	}
 	
 }
+
+.awards li {
+	
+	display: inline-block;
+
+}
+
+.awards .award-image {
+	
+    width: 9em;
+    height: 9em;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+	border: 2px solid grey;
+    border-radius: 50%;	    
+
+}
+
+.visually-hidden {
+	
+	display: none;
+	
+}
