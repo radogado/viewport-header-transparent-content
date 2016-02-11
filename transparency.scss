@@ -57,6 +57,26 @@
 
 }
 
+.transparency main .row.transparent .hole > * {
+
+	position: relative;
+
+}
+
+.transparency main .row.transparent .hole > *:last-child:after {
+	
+	content: '';
+    position: absolute;
+    left: -50%;
+    right: 0;
+    top: 100%;
+    width: 200%;
+    bottom: auto;
+    height: 100vh;
+    background: #fff;
+	
+}
+
 @media screen and (max-width: 767px) {
 	
 	.transparency main .row.transparent > *:after {
@@ -83,24 +103,6 @@
 	border-right: 5em solid #fff;
 	border-top: 2em solid #fff;
 	border-bottom: 2em solid #fff;
-
-}
-
-.transparency main .row.transparent > * > *:not(.circle) {
-
-	box-shadow: 0 100px 0 #fff; // Should be 100vh
-
-}
-
-.transparency main .row.transparent > * > * > :first-child {
-
-	margin-top: 0;
-
-}
-
-.transparency main .row.transparent > * > * > :last-child {
-
-	margin-bottom: 0;
 
 }
 
