@@ -363,3 +363,23 @@ footer {
 	display: none;
 	
 }
+
+/* Accordion */
+
+.panel-collapse {
+	
+	overflow: hidden;
+	
+}
+
+.panel-collapse.collapse {
+	
+	height: 0;
+
+}
+
+.panel-collapse.collapse.in {
+	
+	height: auto;
+
+}
