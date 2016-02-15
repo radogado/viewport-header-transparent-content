@@ -386,12 +386,14 @@
     "tables.less",
     "forms.less",
     "buttons.less",
+    "navs.less",
     "carousel.less"
   ],
   "js": [
     "carousel.js",
+    "tab.js",
     "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=61b643debdb93130d62f"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=e8a0a78b1f52cf2449a5"
 }
