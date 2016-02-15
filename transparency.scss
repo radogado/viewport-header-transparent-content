@@ -32,6 +32,13 @@
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	box-shadow: 50vw 0 0 #fff, -50vw 0 0 #fff;
+	margin-bottom: -1px;
+
+}
+
+#content {
+	
+	margin-bottom: -1px;
 
 }
 
@@ -47,6 +54,12 @@
 	
 	margin: 0;
 	padding: 0;
+	background: #fff;
+
+}
+
+.section:before, .section:after { // Clear inner margins
+	
 	background: #fff;
 
 }

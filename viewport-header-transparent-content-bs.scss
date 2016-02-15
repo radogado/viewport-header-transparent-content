@@ -201,6 +201,8 @@ a[href] {
 	
 	content: '';
 	display: table;
+	table-layout: fixed;
+	width: 0;
 
 }
 
