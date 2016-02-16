@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 @import 'bootstrap.min';
 @import 'bootstrap.rado';
 @import 'transparency';
@@ -187,6 +189,11 @@ a[href] {
 	
 	text-decoration: none;
 	display: inline-block;
+	
+}
+
+header a[href] {
+	
 	color: inherit;
 	
 }

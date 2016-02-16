@@ -54,7 +54,7 @@
 
 }	
 
-.btn {
+header .btn {
 
 	-webkit-transition: all .15s linear;
 	transition: all .15s linear;
@@ -64,6 +64,10 @@
 	
 	-webkit-animation: button-animation 1.5s 1;
 	animation: button-animation 1.5s 1;
+
+}
+
+.btn {
 
 	padding: 1em 1.7em;
 	border: 1px solid #fff;

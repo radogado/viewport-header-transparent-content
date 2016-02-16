@@ -157,11 +157,33 @@ body {
 
 /* Bootstrap Carousel additions */
 
+.carousel {
+	
+	margin-bottom: 3em;
+
+}
+
 .carousel-inner > .item > img {
 	
 	margin: 0 auto;
 	
 }
+
+.carousel-indicators {
+	
+	bottom: -3em;
+	
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+	
+	width: 1em;
+	height: 1em;
+	border: 2px solid #fff;
+	
+}
+
+/* Buttons */
 
 .btn {
 	
@@ -174,3 +196,4 @@ body {
 	white-space: normal; // Bootstrap fix
 	
 }
+
