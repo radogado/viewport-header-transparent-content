@@ -375,6 +375,14 @@ footer {
 
 /* Accordion */
 
+.panel {
+	
+	text-align: left;
+	text-align: start;
+	border-bottom: 1px solid #ddd;
+
+}
+
 .panel-collapse {
 	
 	overflow: hidden;
@@ -390,5 +398,80 @@ footer {
 .panel-collapse.collapse.in {
 	
 	height: auto;
+
+}
+
+.panel-group {
+	
+    border: 1px solid #ddd;
+    border-bottom: none;
+    margin: 1em;
+	    
+}
+
+.panel-title {
+	
+	margin: 0;
+	font-size: 1.7em;
+
+}
+
+.panel-title a, .panel-body {
+	
+	padding: 1rem;
+	display: block;
+	color: #544c64;
+	position: relative;
+	
+}
+
+.panel-title a:after {
+	
+	content: '+';
+	display: inline-block;
+	text-align: center;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	line-height: 1em;
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	
+}
+
+/* Tabs */
+
+.nav-tabs {
+	
+	text-align: center;
+	border: none;
+	background: #eee;
+    padding: 1em;
+	
+}
+
+.nav-tabs>li {
+	
+	float: none;
+	display: inline-block;
+	
+}
+.nav-tabs > li > a {
+
+	font-family: bebas_neuebold, Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	line-height: 1;
+	text-decoration: underline;
+
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+
+	text-decoration: none;
+	border-color: transparent;
+	background: none;
 
 }

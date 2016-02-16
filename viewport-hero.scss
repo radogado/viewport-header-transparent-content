@@ -1,49 +1,29 @@
 .viewport-flex { // Element as tall as the viewport with auto-height children and one vertically-aligned child taking up all available vertical space
 	
-	 height: 100vh; // To do: min-height would make flex work again in Safari
-/*
+	 min-height: 100vh; // To do: min-height would make flex work again in Safari
 	 display: flex; 
 	 flex-direction: column;
-*/
-
-display: table;
-text-align: center;
-width: 100%;
-table-layout: fixed;
 	 
 }
 
 .viewport-flex > * {
 	
-/*
 	flex-grow: none; 
 	flex-shrink: 0;
-*/
-
-display: table-row;
 
 }
 
 .viewport-flex > .grow-align {
 
-/*
 	flex: 1 1 auto; 
 	display: flex;
-*/
-
-display: table-row;
-height: 100%;
 
 }
 
 .viewport-flex > .grow-align > * {
 
-/*
 	align-self: center;
+    text-align: center;
 	margin: 0 auto;
-*/
-
-vertical-align: middle;
-display: table-cell;
 
 }
