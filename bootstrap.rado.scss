@@ -108,6 +108,14 @@ body {
 
 }
 
+	.masonry.col2 {
+		
+	    -moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		
+	}
+
     .masonry > * {
 
         display: inline-block; /* Display inline-block, and absolutely NO FLOATS! */
@@ -180,7 +188,15 @@ body {
 	width: 1em;
 	height: 1em;
 	border: 2px solid #fff;
+	min-height: 0;
+    padding: 0;
 	
+}
+
+.carousel-indicators li:before {
+	
+	display: none;
+
 }
 
 /* Buttons */

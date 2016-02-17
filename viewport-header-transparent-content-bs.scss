@@ -319,13 +319,18 @@ footer {
 	
 }
 
-.text-list-2col {
-	
+/* Lists */
+
+	ul, ol {
+		
+		list-style: none;
+		padding: 0;
+		text-align: start;
+
+	}
+
 	ol {
 		
-		column-count: 2;
-		list-style: none;
-		text-align: start;
 		counter-reset: level1;
 
 	}
@@ -334,21 +339,37 @@ footer {
 		
 		display: block;
 		margin: .5em 0;
+	    padding-left: 4em;
+	    position: relative;
+	    min-height: 2em;
 		
 	}
 	
 	li:before {
-		
-	    content: counter(level1) '.';
-	    counter-increment: level1;
-	    background: cyan;
+			
+		content: '✓';
+	    background: #41aeb5;
+	    color: #fff;
 	    display: inline-block;
-	    padding: 0 1em;
 	    margin: 0 1em;
-
+	    border-radius: 50%;
+	    min-width: 2em;
+	    height: 2em;
+	    text-align: center;
+	    line-height: 2;
+	    font-family: bebas_neuebold, Helvetica, Arial, sans-serif;
+	    position: absolute;
+		left: 0;
+	    top: -.3em;
+		
 	}
 	
-}
+	ol li:before {
+		
+	    content: counter(level1);
+	    counter-increment: level1;
+    
+	}
 
 .awards li {
 	
@@ -458,6 +479,7 @@ footer {
 	
 	float: none;
 	display: inline-block;
+	padding: 0;
 	
 }
 
@@ -510,4 +532,25 @@ b.tick:before {
 	content: '✓';
 	line-height: 1;
 	
+}
+
+/* Step Circles */
+
+.module-stepcircles li:before, .global-offices li:before, .awards li:before, .nav li:before {
+	
+	display: none;
+	
+}
+
+.unmissable-offers { /* Unmissable */
+	
+	color: #fff;
+
+}
+
+.unmissable-offers .row > * {
+	
+    align-self: center;
+    background-size: cover;
+
 }
