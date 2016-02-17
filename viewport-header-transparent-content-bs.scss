@@ -469,7 +469,7 @@ footer {
 
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover {
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover, .nav-tabs > li.active > a:hover {
 
 	text-decoration: none;
 	border-color: transparent;
@@ -490,4 +490,23 @@ footer {
     border-width: 0 1em 1em 1em;
     border-color: transparent transparent #ffffff transparent;
     
+}
+
+/* Tick */
+
+b.tick {
+	
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	border: 1px solid;
+	border-radius: 50%;
+	
+}
+
+b.tick:before {
+	
+	content: '✓';
+	line-height: 1;
+	
 }

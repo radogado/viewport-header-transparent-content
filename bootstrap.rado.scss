@@ -197,3 +197,41 @@ body {
 	
 }
 
+/* Tables */
+
+.table {
+	
+    overflow: auto;
+    display: block;
+    
+}
+
+.table thead th {
+	
+	text-align: center;
+	
+}
+
+.table tbody tr:nth-child(2n) {
+	
+	background: #f8f8f9;
+	
+}
+
+.table tbody tr:nth-child(2n+1) {
+	
+	background: #fbfbfc;
+	
+}
+
+.table > thead > tr > th {
+	
+	border-bottom: none;
+
+}
+
+.table tbody {
+	
+	border: 1px solid #ddd;
+	    
+}
