@@ -164,6 +164,16 @@ main .row.transparent > * > .circle {
 	
 }
 
+@-moz-document url-prefix() {
+
+	.transparent .circle:after { /* FF not supporting inline SVG */
+		
+		background-image: url(transparent-circle-in-white-square.svg);
+	
+	}
+
+}
+
 .transparent .circle > * {
 	
 /*
