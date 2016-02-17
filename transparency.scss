@@ -76,7 +76,7 @@
 
 }
 
-.transparency main .row.transparent .hole > *:last-child:after {
+.transparency main .row.transparent .hole > *:last-child:before { /* Put background over transparent space below the last div, a result of other taller columns */
 	
 	content: '';
     position: absolute;
@@ -123,7 +123,7 @@
 
 .transparent .circle {
 
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
 
 }
@@ -138,34 +138,38 @@ main .row.transparent > * > .circle {
 
 .transparent .circle:before { // Make it a square
 	
+/*
 	content: '';
 	display: inline-block;
 	padding-bottom: 100%;
 	vertical-align: middle;
+*/
 	
 }
 
 // Transparent circle box
 
 .transparent .circle:after { // Overlay a circle with big enough border to create a hole
-	
+
 	content: '';
 	display: block;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: -99rem;
-	left: -99rem;
-	border: 99rem solid #fff;
-	border-radius: 50%;
-	box-sizing: content-box;
+	top: 0;
+	left: 0;
+	/* white SVG rectangle with a transparent circle */
+	background: url('data:image/svg+xml; utf8, <svg width="202px" height="202px" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"> <defs></defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <path d="M0,0 L202,0 L202,202 L0,202 L0,0 Z M101,202 C156.78076,202 202,156.78076 202,101 C202,45.2192403 156.78076,0 101,0 C45.2192403,0 0,45.2192403 0,101 C0,156.78076 45.2192403,202 101,202 Z" id="Rectangle-2" fill="#FFFFFF" sketch:type="MSShapeGroup"></path> </g> </svg>') center center no-repeat;
+	background-size: cover;
 	
 }
 
 .transparent .circle > * {
 	
+/*
 	width: 70%;
 	height: 70%;
+*/
 	vertical-align: middle;
 	display: inline-block;
 
