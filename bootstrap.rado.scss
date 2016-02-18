@@ -54,12 +54,6 @@ body {
 	
 }
 
-	.row:before, .row:after {
-		
-		display: none;
-	
-	}
-	
 	.row > * {
 		
 		vertical-align: top;
@@ -171,6 +165,13 @@ body {
 
 }
 
+.carousel-inner.row > * {
+	
+	margin: 0;
+	padding: 0;
+	
+}
+
 .carousel-inner > .item > img {
 	
 	margin: 0 auto;
@@ -197,6 +198,29 @@ body {
 	
 	display: none;
 
+}
+
+.carousel-control {
+	
+	width: 3em;
+    height: 2em;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.carousel-control.left, .carousel-control.right {
+	
+    background: none;
+
+}
+
+.carousel-control .glyphicon {
+	
+    color: #ddd;
+    text-shadow: none;
+	
 }
 
 /* Buttons */

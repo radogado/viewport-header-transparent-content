@@ -386,6 +386,7 @@
     "tables.less",
     "forms.less",
     "buttons.less",
+    "glyphicons.less",
     "navs.less",
     "carousel.less"
   ],
@@ -395,5 +396,5 @@
     "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=e8a0a78b1f52cf2449a5"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=b56d59a5fbea34329da1"
 }

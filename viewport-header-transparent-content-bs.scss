@@ -264,7 +264,7 @@ footer {
 	 
 }
 
-.hero-bottom-banner a[href] {
+.hero-bottom-banner .carousel {
 	
 	 display: block; 
 	 font-size: 0; 
@@ -273,13 +273,36 @@ footer {
 	 
 }
 
-.hero-bottom-banner a[href]:before {
+/*
+.carousel .item:before, .carousel .item:after {
 	
+	content: '';
+	display: table;
+	
+}
+*/
+
+.hero-bottom-banner .carousel a[href]:not(.btn) {
+	
+	display: block;
+
+}
+
+.hero-bottom-banner .carousel:before {
+	
+/*
 	content: '';
 	padding-bottom: 7%; //  Aspect ratio
 	display: inline-block; 
 	width: 0;
+*/
 	
+}
+
+.hero-bottom-banner .carousel-indicators {
+	
+	display: none;
+
 }
 
 .outline-text-cta h2 {
@@ -554,3 +577,4 @@ b.tick:before {
     background-size: cover;
 
 }
+
