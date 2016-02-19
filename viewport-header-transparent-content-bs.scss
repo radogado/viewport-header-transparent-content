@@ -26,6 +26,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "bebas_neuebook";
+    src: url('bebasneue_book-webfont.eot');
+    src: url('bebasneue_book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bebasneue_book-webfont.woff2') format('woff2'),
+         url('bebasneue_book-webfont.woff') format('woff'),
+         url('bebasneue_book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
 	
 	box-sizing: border-box;
@@ -202,6 +213,15 @@ header a[href] {
 .head a[href] {
 	
 	vertical-align: middle;
+    font-family: robotoregular, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+
+}
+
+.head .links a[href], .head .links a[href] b {
+
+	font-family: bebas_neuebook, Helvetica, Arial, sans-serif;
+	font-size: 1.3rem;
 
 }
 
