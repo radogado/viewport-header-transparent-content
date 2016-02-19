@@ -84,6 +84,7 @@
 	-webkit-animation: none;
 	animation: none;
 	background: transparent;
+	font-weight: bold;
 	
 }
 
@@ -139,6 +140,7 @@
 	animation: button-animation 1.5s 1;
 	background: rgba(85, 78, 102, .5);
 	border-color: #fff;
+	letter-spacing: 1.02px; // Chrome bug
 
 }
 
@@ -170,7 +172,22 @@
 
 /* Themes */
 
-.btn {
+.dark .btn {
 	
+	border-color: #41aeb5;
 	
 }
+
+.dark .btn:before {
+	
+	background: #41aeb5;
+	
+}
+
+.dark .btn:hover, .dark .btn:hover:after {
+	
+	color: #41aeb5;
+	border-color: #41aeb5;
+
+}
+

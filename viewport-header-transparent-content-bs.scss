@@ -222,6 +222,7 @@ header a[href] {
 
 	font-family: bebas_neuebook, Helvetica, Arial, sans-serif;
 	font-size: 1.3rem;
+	letter-spacing: 3px;
 
 }
 
@@ -595,6 +596,29 @@ b.tick:before {
 	
     align-self: center;
     background-size: cover;
+
+}
+
+/* Box */
+
+.box {
+	
+	background: #fff;
+	padding: 1em;
+	
+}
+
+/* Element themes */
+
+.dark {
+	
+	color: #fff;
+
+}
+
+.section.dark {
+	
+    background: #544c64;
 
 }
 
