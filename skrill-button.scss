@@ -61,10 +61,11 @@
 	
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+	margin: 1em 0;
 	
 }
 
-.btn, .hero .box .btn {
+.btn {
 
 	padding: 1em 1.7em;
 	border: 1px solid #fff;
@@ -86,7 +87,7 @@
 	
 }
 
-.btn:before, .hero .box .btn:before {
+.btn:before {
 	
 	content: '';	
 	position: absolute;
@@ -105,7 +106,7 @@
 	content: '›';
 	display: inline-block;
 	position: absolute;
-	right: 1em;
+	right: .8em;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -119,20 +120,20 @@
 
 }
 
-.btn:hover, .btn:hover:after, .hero .box .btn:hover, .hero .box .btn:hover:after {
+.btn:hover, .btn:hover:after {
 	
 	color: #811e68;
 	border-color: #811e68;
 
 }
 
-.btn:hover:before, .hero .box .btn:hover:before {
+.btn:hover:before {
 	
 	top: 100%;
 
 }
 
-.hero .btn {
+.cta-holder .btn {
 
 	-webkit-animation: button-animation 1.5s 1;
 	animation: button-animation 1.5s 1;
@@ -141,20 +142,20 @@
 
 }
 
-.hero .btn:before {
+.cta-holder .btn:before {
 	
 	top: 100%;
 	background: #fff;
 	
 }
 
-.hero .btn:hover:before {
+.cta-holder .btn:hover:before {
 	
 	top: 0;
 	
 }
 
-.hero .btn:hover, .hero .btn:hover:after {
+.cta-holder .btn:hover, .hero .btn:hover:after {
 	
 	color: rgba(85, 78, 102, .5);
 	border-color: rgba(85, 78, 102, .5);
